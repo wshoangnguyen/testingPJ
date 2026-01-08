@@ -470,24 +470,6 @@
             cursor: not-allowed;
             transform: none;
         }
-        
-        /* Style cho nút Kết thúc trong thanh điều khiển */
-.end-game-btn {
-    padding: 10px 25px;
-    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
-    transition: all 0.3s;
-}
-
-.end-game-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
 
         .control-btn {
             padding: 10px 20px;
@@ -783,13 +765,33 @@
 
         /* Nút kết thúc cố định ở góc phải dưới */
         .fixed-end-btn {
- display: none !important;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: none;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            display: none;
         }
 
-        /*.fixed-end-btn:hover {
+        .fixed-end-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-        }*/
+        }
 
         .pause-overlay {
             display: none;
@@ -987,7 +989,8 @@
                 <div class="word-actions">
                     <button class="clear-btn" onclick="clearSelection()">🗑️ Xóa</button>
                     <button id="checkBtn" class="check-btn" onclick="checkWord()" disabled>✅ Check</button>
-                    <button class="end-game-btn" onclick="endGameEarly()">🏁 Kết thúc</button>
+                    <button id="resetBtn" class="control-btn reset-btn" onclick="useReset()">🔄 Reset (<span id="resetCount">3</span>)</button>
+                    <button id="hintBtn" class="control-btn hint-btn" onclick="useHint()">💡 Hint (<span id="hintCount">3</span>)</button>
                 </div>
             </div>
 
