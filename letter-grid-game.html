@@ -33,7 +33,6 @@
             width: 120px;
             height: auto;
             border-radius: 15px;
-            /*box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);*/
             transition: transform 0.3s;
         }
 
@@ -708,6 +707,66 @@
             background: #95a5a6;
         }
 
+        /* NÚT TRỢ GIÚP MỚI */
+        .helper-btn {
+            position: fixed;
+            z-index: 100;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            color: white;
+        }
+
+        .reset-btn {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            bottom: 90px;
+            right: 20px;
+        }
+
+        .reset-btn:hover {
+            background: linear-gradient(135deg, #8e44ad 0%, #732d91 100%);
+            transform: scale(1.05);
+        }
+
+        .reset-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+            background: #95a5a6 !important;
+        }
+
+        .hint-btn-fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            color: white;
+            z-index: 100;
+        }
+
+        .hint-btn-fixed:hover {
+            transform: scale(1.05);
+        }
+
+        .hint-btn-fixed:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
         .end-game-btn {
             position: fixed;
             bottom: 20px;
@@ -716,23 +775,20 @@
             background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
             color: white;
             border: none;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
+            padding: 12px 20px;
+            border-radius: 10px;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: bold;
             transition: all 0.3s;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            padding: 5px;
         }
 
         .end-game-btn:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             box-shadow: 0 6px 12px rgba(0,0,0,0.3);
         }
 
@@ -754,12 +810,53 @@
             padding: 40px;
             border-radius: 20px;
             text-align: center;
+            max-width: 600px;
+            width: 90%;
         }
 
         .pause-content h2 {
             color: #3498db;
             font-size: 48px;
             margin-bottom: 20px;
+        }
+
+        .word-list-pause {
+            background: #e8f5e9;
+            border: 2px solid #27ae60;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .word-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .word-grid span {
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 2px solid #27ae60;
+            font-weight: bold;
+        }
+
+        .word-grid .completed {
+            background: #27ae60;
+            color: white;
+        }
+
+        .encouragement {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+            border: 3px dashed #e17055;
         }
 
         .vocab-status {
@@ -777,6 +874,25 @@
             background: #ffebee;
             border-color: #e74c3c;
             color: #e74c3c;
+        }
+
+        /* HIỆU ỨNG FADE */
+        @keyframes fadeOut {
+            from { opacity: 1; transform: scale(1); }
+            to { opacity: 0; transform: scale(0.5); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .fade-out {
+            animation: fadeOut 0.5s ease forwards;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
         }
 
         @media (max-width: 768px) {
@@ -806,12 +922,24 @@
                 font-size: 20px;
             }
             
-            .end-game-btn {
-                width: 55px;
-                height: 55px;
-                font-size: 12px;
+            .helper-btn, .hint-btn-fixed, .end-game-btn {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            
+            .reset-btn {
+                bottom: 80px;
+                right: 15px;
+            }
+            
+            .hint-btn-fixed {
                 bottom: 15px;
                 right: 15px;
+            }
+            
+            .end-game-btn {
+                bottom: 15px;
+                left: 15px;
             }
         }
     </style>
@@ -821,11 +949,23 @@
         <img src="logo.png" alt="Super Minds Logo" id="gameLogo">
     </div>
 
+    <!-- NÚT ÂM NHẠC -->
     <div class="music-control">
         <button id="musicToggle" class="music-btn" onclick="toggleMusic()">♫</button>
     </div>
 
-    <button id="endGameBtn" class="end-game-btn" onclick="endGameEarly()" style="display: none;">KẾT THÚC</button>
+    <!-- NÚT TRỢ GIÚP CỐ ĐỊNH -->
+    <button id="hintBtnFixed" class="hint-btn-fixed" onclick="useHint()" style="display: none;">
+        💡 Hint (<span id="hintCountFixed">3</span>)
+    </button>
+    
+    <button id="resetGridBtn" class="helper-btn reset-btn" onclick="resetGrid()" style="display: none;">
+        🔄 Reset Grid (<span id="resetCount">3</span>)
+    </button>
+    
+    <button id="endGameBtn" class="end-game-btn" onclick="endGameEarly()" style="display: none;">
+        🏁 Kết Thúc
+    </button>
 
     <div class="container">
         <h1>🎯 Letter Grid Collector 🎯</h1>
@@ -855,13 +995,6 @@
                     <label for="levelSelect">📚 Chọn Level:</label>
                     <select id="levelSelect" onchange="onLevelChange()">
                         <option value="">-- Chọn Level --</option>
-                        <option value="0">Super Minds 0</option>
-                        <option value="1">Super Minds 1</option>
-                        <option value="2">Super Minds 2</option>
-                        <option value="3">Super Minds 3</option>
-                        <option value="4">Super Minds 4</option>
-                        <option value="5">Super Minds 5</option>
-                        <option value="6">Super Minds 6</option>
                     </select>
                 </div>
                 <div class="select-group">
@@ -917,13 +1050,13 @@
                     <button class="clear-btn" onclick="clearSelection()">🗑️ Xóa</button>
                     <button id="checkBtn" class="check-btn" onclick="checkWord()" disabled>✅ Check</button>
                     <button id="pauseBtn" class="control-btn pause-btn" onclick="togglePause()">⏸️ Pause</button>
-                    <button id="hintBtn" class="control-btn hint-btn" onclick="useHint()">💡 Hint (<span id="hintCount">3</span>)</button>
                 </div>
             </div>
 
             <div id="feedback" class="feedback"></div>
         </div>
 
+        <!-- MODAL KẾT THÚC -->
         <div id="gameOverModal" class="modal">
             <div class="modal-content">
                 <h2 id="modalTitle">🎉 Kết Quả 🎉</h2>
@@ -950,27 +1083,61 @@
             </div>
         </div>
 
+        <!-- PAUSE MENU -->
         <div id="pauseOverlay" class="pause-overlay">
             <div class="pause-content">
                 <h2>⏸️ PAUSED</h2>
-                <p>Nhấn Resume để tiếp tục</p>
-                <button class="btn btn-primary" onclick="togglePause()">▶️ Resume</button>
+                
+                <!-- DANH SÁCH TỪ (CHỈ CHẾ ĐỘ TRẢ BÀI) -->
+                <div id="practiceWordList" class="word-list-pause" style="display: none;">
+                    <h3>📖 Danh sách từ trong bài:</h3>
+                    <div class="word-grid" id="pauseWordGrid"></div>
+                </div>
+                
+                <!-- CÂU ĐỘNG VIÊN (CHỈ CHẾ ĐỘ ĐIỂM CAO) -->
+                <div id="encouragementMessage" class="encouragement" style="display: none;">
+                    <h3>💪 Bạn làm tốt lắm!</h3>
+                    <p id="randomEncouragement">Tiếp tục phát huy nhé! 🔥</p>
+                </div>
+                
+                <button class="btn btn-primary" onclick="togglePause()">▶️ Tiếp tục</button>
             </div>
         </div>
     </div>
 
     <script>
-        const backgroundMusic = new Audio('background-music.mp3');
-        backgroundMusic.loop = true;
-        backgroundMusic.volume = 0.5;
-
-        const correctSound = new Audio('right.mp3');
-        const wrongSound = new Audio('drop.mp3');
-        const comboSound = new Audio('drop.mp3');
-
+        // ==================== KHỞI TẠO ÂM THANH ====================
+        let backgroundMusic, correctSound, wrongSound, comboSound;
         let isMusicPlaying = false;
         let musicInitialized = false;
+        
+        function initializeAudio() {
+            try {
+                backgroundMusic = new Audio('background-music.mp3');
+                backgroundMusic.loop = true;
+                backgroundMusic.volume = 0.5;
+                
+                correctSound = new Audio('right.mp3');
+                wrongSound = new Audio('drop.mp3');
+                comboSound = new Audio('drop.mp3');
+                
+                correctSound.volume = 0.7;
+                wrongSound.volume = 0.7;
+                comboSound.volume = 0.7;
+            } catch (e) {
+                console.log('Không thể khởi tạo âm thanh:', e);
+                // Tạo các audio object rỗng để tránh lỗi
+                backgroundMusic = { play: () => {}, pause: () => {} };
+                correctSound = { play: () => {} };
+                wrongSound = { play: () => {} };
+                comboSound = { play: () => {} };
+            }
+        }
+        
+        // Gọi khởi tạo audio ngay
+        initializeAudio();
 
+        // ==================== DỮ LIỆU TỪ VỰNG ====================
         let vocabData = {};
         let expansionVocab = [];
         let allVocabWords = [];
@@ -1023,8 +1190,6 @@
             populateLevelSelect();
             vocabLoaded = true;
             showVocabStatus(true);
-            console.log('Vocabulary loaded:', vocabData);
-            console.log('Expansion vocab:', expansionVocab);
         }
 
         function buildAllVocabList() {
@@ -1064,6 +1229,7 @@
             }
         }
 
+        // ==================== TẢI TỪ VỰNG KHI KHỞI ĐỘNG ====================
         window.onload = function() {
             fetch('vocab.txt')
                 .then(response => {
@@ -1083,7 +1249,7 @@
             document.getElementById('modeSection').style.display = 'block';
         };
 
-
+        // ==================== BIẾN TOÀN CỤC GAME ====================
         let gameMode = 'practice';
         let selectedLevel = '';
         let selectedUnit = '';
@@ -1094,18 +1260,164 @@
         let currentCombo = 0;
         let speedLevel = 1;
         let hintsRemaining = 3;
+        let resetCount = 0;
+        const MAX_RESETS = 3;
+        const MAX_HINTS = 3;
         let isPaused = false;
         let isGameOver = false;
         let hintCellIndex = -1;
+        let currentTargetWord = null;
+        let lastGridCheck = 0;
+        const GRID_CHECK_INTERVAL = 2000; // 2 giây
 
         const gridSize = 10;
         let gridCells = [];
         let selectedCells = [];
         let letterSpawnInterval = null;
-        let spawnDelay = 5000; // Giảm từ 10000 xuống 7000ms (7 giây)
-        let currentWordForSpawn = null;
-        let lettersToSpawn = [];
+        let spawnDelay = 5000; // Giảm xuống 5 giây
+        let lettersOnGrid = [];
 
+        // ==================== HỆ THỐNG SPAWN THÔNG MINH ====================
+        function getCurrentLetters() {
+            return gridCells
+                .filter(cell => cell.hasLetter)
+                .map(cell => cell.letter.toLowerCase());
+        }
+
+        function canFormWord(availableLetters, word) {
+            const wordLetters = word.split('');
+            const available = [...availableLetters];
+            
+            for (const letter of wordLetters) {
+                const index = available.indexOf(letter);
+                if (index === -1) return false;
+                available.splice(index, 1);
+            }
+            return true;
+        }
+
+        function getMissingLetters(word, currentLetters) {
+            const wordLetters = word.split('');
+            const gridLetters = [...currentLetters];
+            const missing = [];
+            
+            for (const letter of wordLetters) {
+                const index = gridLetters.indexOf(letter);
+                if (index === -1) {
+                    missing.push(letter.toUpperCase());
+                } else {
+                    gridLetters.splice(index, 1);
+                }
+            }
+            
+            return missing;
+        }
+
+        function findBestTargetWord() {
+            const currentLetters = getCurrentLetters();
+            const uncompleted = targetWords.filter(word => !completedWords.includes(word));
+            
+            let bestWord = null;
+            let bestCompletion = -1;
+            let bestMissing = Infinity;
+            
+            for (const word of uncompleted) {
+                if (canFormWord(currentLetters, word)) {
+                    const missing = getMissingLetters(word, currentLetters);
+                    const completion = ((word.length - missing.length) / word.length) * 100;
+                    
+                    // Ưu tiên từ có completion cao và ít chữ còn thiếu
+                    if (completion > bestCompletion || 
+                        (completion === bestCompletion && missing.length < bestMissing)) {
+                        bestWord = word;
+                        bestCompletion = completion;
+                        bestMissing = missing.length;
+                    }
+                }
+            }
+            
+            return bestWord;
+        }
+
+        function spawnMissingLetters(word) {
+            const currentLetters = getCurrentLetters();
+            const missing = getMissingLetters(word, currentLetters);
+            
+            if (missing.length === 0) return false;
+            
+            // Spawn chữ còn thiếu
+            const emptyCells = gridCells
+                .map((cell, index) => ({ cell, index }))
+                .filter(({ cell }) => !cell.hasLetter);
+            
+            if (emptyCells.length === 0) return false;
+            
+            // Spawn tối đa số chữ còn thiếu hoặc số ô trống
+            const lettersToSpawn = missing.slice(0, Math.min(missing.length, emptyCells.length));
+            const shuffledCells = [...emptyCells].sort(() => Math.random() - 0.5);
+            
+            lettersToSpawn.forEach((letter, i) => {
+                if (i < shuffledCells.length) {
+                    const { cell, index } = shuffledCells[i];
+                    setTimeout(() => {
+                        cell.letter = letter;
+                        cell.hasLetter = true;
+                        cell.element.textContent = letter;
+                        cell.element.classList.add('has-letter', 'fade-in');
+                        
+                        setTimeout(() => {
+                            cell.element.classList.remove('fade-in');
+                        }, 500);
+                    }, i * 100);
+                }
+            });
+            
+            console.log(`Spawn ${lettersToSpawn.length} chữ cho từ: ${word}`);
+            return true;
+        }
+
+        function smartSpawn() {
+            const now = Date.now();
+            if (now - lastGridCheck < GRID_CHECK_INTERVAL) {
+                spawnRandomLetter();
+                return;
+            }
+            
+            lastGridCheck = now;
+            
+            // Tìm từ tốt nhất để spawn
+            currentTargetWord = findBestTargetWord();
+            
+            if (currentTargetWord) {
+                spawnMissingLetters(currentTargetWord);
+            } else {
+                spawnRandomLetter();
+            }
+        }
+
+        function spawnRandomLetter() {
+            const emptyCells = gridCells.filter(cell => !cell.hasLetter);
+            if (emptyCells.length === 0) return;
+            
+            // Lấy chữ cái ngẫu nhiên từ các từ chưa hoàn thành
+            const uncompletedWords = targetWords.filter(word => !completedWords.includes(word));
+            if (uncompletedWords.length === 0) return;
+            
+            const randomWord = uncompletedWords[Math.floor(Math.random() * uncompletedWords.length)];
+            const randomLetter = randomWord[Math.floor(Math.random() * randomWord.length)].toUpperCase();
+            
+            const randomCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+            randomCell.letter = randomLetter;
+            randomCell.hasLetter = true;
+            randomCell.element.textContent = randomLetter;
+            randomCell.element.classList.add('has-letter', 'fade-in');
+            
+            setTimeout(() => {
+                randomCell.element.classList.remove('fade-in');
+            }, 500);
+        }
+
+        // ==================== KHỞI TẠO GRID ====================
         function initializeGrid() {
             const gridBoard = document.getElementById('gridBoard');
             gridBoard.innerHTML = '';
@@ -1130,93 +1442,7 @@
             }
         }
 
-        // HÀM MỚI: Spawn toàn bộ từ tiếp theo
-        function spawnCompleteWord() {
-            if (isGameOver) return;
-            
-            // Chuẩn bị từ tiếp theo nếu chưa có
-            if (!currentWordForSpawn || lettersToSpawn.length === 0) {
-                prepareNextWord();
-                if (!currentWordForSpawn) {
-                    console.log('Không còn từ nào để spawn');
-                    return; // Không còn từ nào
-                }
-            }
-            
-            // Lấy từ hiện tại
-            const word = currentWordForSpawn;
-            const letters = word.split('').map(l => l.toUpperCase());
-            
-            // Tìm các ô trống
-            const emptyCells = gridCells
-                .map((cell, index) => ({ cell, index }))
-                .filter(({ cell }) => !cell.hasLetter);
-            
-            // Nếu không đủ ô trống, spawn ít hơn hoặc dừng
-            if (emptyCells.length < letters.length) {
-                console.log('Không đủ ô trống để spawn từ đầy đủ:', word);
-                
-                // Spawn càng nhiều càng tốt
-                const cellsToUse = emptyCells.slice(0, letters.length);
-                cellsToUse.forEach(({ cell, index }, i) => {
-                    if (i < letters.length) {
-                        cell.letter = letters[i];
-                        cell.hasLetter = true;
-                        cell.element.textContent = letters[i];
-                        cell.element.classList.add('has-letter');
-                    }
-                });
-            } else {
-                // Xáo trộn các ô trống và spawn toàn bộ từ
-                const shuffledEmptyCells = [...emptyCells].sort(() => Math.random() - 0.5);
-                
-                letters.forEach((letter, i) => {
-                    if (i < shuffledEmptyCells.length) {
-                        const { cell, index } = shuffledEmptyCells[i];
-                        cell.letter = letter;
-                        cell.hasLetter = true;
-                        cell.element.textContent = letter;
-                        cell.element.classList.add('has-letter');
-                    }
-                });
-            }
-            
-            // Đánh dấu đã spawn xong từ này
-            currentWordForSpawn = null;
-            lettersToSpawn = [];
-            
-            console.log('Đã spawn từ:', word);
-        }
-
-        // HÀM MỚI: Spawn từ cụ thể
-        function spawnSpecificWord(word) {
-            const letters = word.split('').map(l => l.toUpperCase());
-            const emptyCells = gridCells
-                .map((cell, index) => ({ cell, index }))
-                .filter(({ cell }) => !cell.hasLetter);
-            
-            if (emptyCells.length === 0) {
-                console.log('Không còn ô trống cho từ:', word);
-                return false;
-            }
-            
-            // Lấy số ô bằng độ dài từ (hoặc ít hơn nếu không đủ)
-            const cellsToUse = emptyCells.slice(0, Math.min(letters.length, emptyCells.length));
-            const shuffledCells = [...cellsToUse].sort(() => Math.random() - 0.5);
-            
-            shuffledCells.forEach(({ cell, index }, i) => {
-                if (i < letters.length) {
-                    cell.letter = letters[i];
-                    cell.hasLetter = true;
-                    cell.element.textContent = letters[i];
-                    cell.element.classList.add('has-letter');
-                }
-            });
-            
-            console.log('Spawn từ:', word, 'vào', cellsToUse.length, 'ô');
-            return cellsToUse.length > 0;
-        }
-
+        // ==================== CHỌN MODE ====================
         function selectMode(mode) {
             if (!vocabLoaded) {
                 alert('⚠️ Chưa tải được file vocab.txt! Hãy đảm bảo file vocab.txt nằm cùng thư mục với file HTML.');
@@ -1237,6 +1463,7 @@
             document.getElementById('setupSection').style.display = 'block';
         }
 
+        // ==================== CHỌN LEVEL/UNIT ====================
         function onLevelChange() {
             const levelSelect = document.getElementById('levelSelect');
             const unitSelect = document.getElementById('unitSelect');
@@ -1247,7 +1474,7 @@
                 unitSelect.innerHTML = '<option value="">-- Chọn Unit --</option>';
                 
                 if (vocabData[selectedLevel]) {
-                    Object.keys(vocabData[selectedLevel]).forEach(unit => {
+                    Object.keys(vocabData[selectedLevel]).sort((a, b) => parseInt(a) - parseInt(b)).forEach(unit => {
                         const option = document.createElement('option');
                         option.value = unit;
                         option.textContent = `Unit ${unit}`;
@@ -1266,6 +1493,7 @@
             document.getElementById('startBtn').disabled = !selectedUnit;
         }
 
+        // ==================== BẮT ĐẦU GAME ====================
         function startGame() {
             if (!vocabLoaded) {
                 alert('⚠️ Chưa tải được file vocab.txt!');
@@ -1302,19 +1530,21 @@
             currentScore = 0;
             currentCombo = 0;
             speedLevel = 1;
-            hintsRemaining = 3;
+            hintsRemaining = MAX_HINTS;
+            resetCount = 0;
             isPaused = false;
             isGameOver = false;
             selectedCells = [];
             hintCellIndex = -1;
-            currentWordForSpawn = null;
-            lettersToSpawn = [];
+            currentTargetWord = null;
+            lastGridCheck = 0;
             
             document.getElementById('score').textContent = currentScore;
             document.getElementById('combo').textContent = currentCombo;
             document.getElementById('speedLevel').textContent = speedLevel;
-            document.getElementById('hintCount').textContent = hintsRemaining;
+            document.getElementById('hintCountFixed').textContent = hintsRemaining;
             document.getElementById('bonusCount').textContent = '0';
+            document.getElementById('resetCount').textContent = MAX_RESETS;
             document.getElementById('comboDisplay').style.display = 'none';
             document.getElementById('progressText').textContent = `0 / ${targetWords.length}`;
             document.getElementById('progressBar').style.width = '0%';
@@ -1327,85 +1557,42 @@
             document.getElementById('setupSection').style.display = 'none';
             document.getElementById('gameSection').style.display = 'block';
             document.getElementById('endGameBtn').style.display = 'block';
+            document.getElementById('hintBtnFixed').style.display = 'block';
+            document.getElementById('resetGridBtn').style.display = 'block';
+            document.getElementById('resetGridBtn').disabled = false;
+            document.getElementById('resetGridBtn').innerHTML = `🔄 Reset Grid (${MAX_RESETS})`;
             
             initializeGrid();
-            prepareNextWord();
             
-            // Spawn từ đầu tiên ngay lập tức
+            // Spawn 2 từ đầu tiên
             setTimeout(() => {
-                spawnCompleteWord();
-                // Spawn thêm từ thứ hai nếu có thể
+                spawnMissingLetters(targetWords[0]);
                 setTimeout(() => {
-                    if (!isGameOver) {
-                        prepareNextWord();
-                        spawnCompleteWord();
-                    }
+                    spawnMissingLetters(targetWords[1] || targetWords[0]);
                 }, 500);
             }, 300);
             
             startLetterSpawning();
-        }
-
-        function prepareNextWord() {
-            const availableWords = targetWords.filter(word => 
-                !completedWords.includes(word) && 
-                !bonusWords.includes(word)
-            );
             
-            if (availableWords.length === 0) {
-                currentWordForSpawn = null;
-                lettersToSpawn = [];
-                return;
+            // Nếu là chế độ practice, pause ngay để xem từ
+            if (gameMode === 'practice') {
+                setTimeout(() => {
+                    isPaused = true;
+                    togglePause();
+                }, 800);
             }
-            
-            // Lấy ngẫu nhiên từ chưa hoàn thành
-            currentWordForSpawn = availableWords[Math.floor(Math.random() * availableWords.length)];
-            lettersToSpawn = currentWordForSpawn.split('').map(l => l.toUpperCase());
-            
-            console.log('Chuẩn bị từ tiếp theo:', currentWordForSpawn);
-        }
-
-        function spawnLetter() {
-            if (isGameOver || isPaused) return;
-            
-            // Nếu không có từ để spawn từng chữ, chuẩn bị từ mới
-            if (lettersToSpawn.length === 0) {
-                prepareNextWord();
-                if (!currentWordForSpawn) {
-                    // Kiểm tra xem đã hoàn thành hết chưa
-                    const allTargetWordsCompleted = targetWords.every(word => 
-                        completedWords.includes(word)
-                    );
-                    if (allTargetWordsCompleted) {
-                        endGame(true);
-                    }
-                    return;
-                }
-            }
-            
-            // Spawn 1 chữ cái
-            const letterToSpawn = lettersToSpawn.shift();
-            
-            const emptyCells = gridCells.filter(cell => !cell.hasLetter);
-            if (emptyCells.length === 0) {
-                return; // Không có ô trống
-            }
-            
-            const randomCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
-            randomCell.letter = letterToSpawn;
-            randomCell.hasLetter = true;
-            randomCell.element.textContent = letterToSpawn;
-            randomCell.element.classList.add('has-letter');
         }
 
         function startLetterSpawning() {
+            clearInterval(letterSpawnInterval);
             letterSpawnInterval = setInterval(() => {
                 if (!isPaused && !isGameOver) {
-                    spawnLetter();
+                    smartSpawn();
                 }
             }, spawnDelay);
         }
 
+        // ==================== CHỌN Ô ====================
         function selectCell(index) {
             if (isPaused || isGameOver) return;
             
@@ -1435,12 +1622,13 @@
             document.getElementById('checkBtn').disabled = word.length === 0;
         }
 
+        // ==================== KIỂM TRA TỪ ====================
         function checkWord() {
             if (selectedCells.length === 0) return;
             
             const currentWord = selectedCells.map(i => gridCells[i].letter).join('').toLowerCase();
             
-            // 1. Kiểm tra trong targetWords (từ vựng bài học)
+            // Kiểm tra trong targetWords (từ vựng bài học)
             const matchingWord = targetWords.find(word => 
                 word === currentWord && !completedWords.includes(word)
             );
@@ -1450,7 +1638,7 @@
                 return;
             }
             
-            // 2. Kiểm tra trong từ vựng mở rộng (expansionVocab)
+            // Kiểm tra trong từ vựng mở rộng
             const expansionMatch = expansionVocab.find(word => 
                 word === currentWord && !bonusWords.includes(word)
             );
@@ -1460,24 +1648,26 @@
                 return;
             }
             
-            // 3. Kiểm tra trong toàn bộ thư viện từ vựng (allVocabWords)
+            // Kiểm tra trong toàn bộ thư viện
             const allVocabMatch = allVocabWords.find(word => 
                 word === currentWord && !completedWords.includes(word) && !bonusWords.includes(word)
             );
             
             if (allVocabMatch) {
-                // Kiểm tra xem từ này có thuộc expansion không
                 const isExpansionWord = expansionVocab.includes(allVocabMatch);
                 correctWord(allVocabMatch, isExpansionWord);
                 return;
             }
             
-            // 4. Nếu không tìm thấy trong bất kỳ danh sách nào
             wrongWord();
         }
 
         function correctWord(word, isBonus) {
-            correctSound.play().catch(e => console.log('Audio play failed:', e));
+            try {
+                correctSound.play();
+            } catch (e) {
+                console.log('Không thể phát âm thanh correct');
+            }
             
             currentCombo++;
             let comboBonus = 0;
@@ -1487,7 +1677,11 @@
                 document.getElementById('combo').textContent = currentCombo;
                 
                 if (currentCombo >= 3) {
-                    comboSound.play().catch(e => console.log('Audio play failed:', e));
+                    try {
+                        comboSound.play();
+                    } catch (e) {
+                        console.log('Không thể phát âm thanh combo');
+                    }
                 }
             }
             
@@ -1521,26 +1715,37 @@
                 feedbackEl.className = 'feedback';
             }, 2000);
             
-            selectedCells.forEach(index => {
+            // Xóa các ô đã chọn với hiệu ứng
+            selectedCells.forEach((index, i) => {
                 const cell = gridCells[index];
-                cell.element.classList.add('correct');
                 setTimeout(() => {
-                    cell.element.classList.remove('correct', 'has-letter', 'selected');
+                    cell.element.classList.add('correct');
+                }, i * 100);
+                
+                setTimeout(() => {
+                    cell.element.classList.add('fade-out');
+                }, i * 100 + 200);
+                
+                setTimeout(() => {
+                    cell.element.classList.remove('correct', 'has-letter', 'selected', 'fade-out');
                     cell.element.textContent = '';
                     cell.hasLetter = false;
                     cell.letter = '';
-                }, 500);
+                }, i * 100 + 700);
             });
             
             selectedCells = [];
             updateCurrentWord();
             
-            // QUAN TRỌNG: Spawn từ mới ngay lập tức sau khi check đúng
+            // Kiểm tra thưởng lượt reset
+            checkForResetReward();
+            
+            // Spawn từ mới ngay lập tức sau khi check đúng
             setTimeout(() => {
                 if (!isGameOver) {
-                    spawnCompleteWord();
+                    smartSpawn();
                 }
-            }, 600);
+            }, 800);
             
             if (completedWords.length % 5 === 0) {
                 increaseSpeed();
@@ -1553,12 +1758,16 @@
             if (allTargetWordsCompleted) {
                 setTimeout(() => {
                     endGame(true);
-                }, 1000);
+                }, 1500);
             }
         }
 
         function wrongWord() {
-            wrongSound.play().catch(e => console.log('Audio play failed:', e));
+            try {
+                wrongSound.play();
+            } catch (e) {
+                console.log('Không thể phát âm thanh wrong');
+            }
             
             currentCombo = 0;
             document.getElementById('comboDisplay').style.display = 'none';
@@ -1582,6 +1791,87 @@
             updateCurrentWord();
         }
 
+        // ==================== NÚT RESET GRID ====================
+        function resetGrid() {
+            if (resetCount >= MAX_RESETS) {
+                showMessage('Bạn đã hết lượt reset! Hãy cố gắng ghép từ nhé!', 'error');
+                return;
+            }
+            
+            if (confirm(`Reset grid để nhận chữ mới? (Còn ${MAX_RESETS - resetCount} lượt)`)) {
+                const resetBtn = document.getElementById('resetGridBtn');
+                resetBtn.disabled = true;
+                resetBtn.innerHTML = '⏳ Đang reset...';
+                
+                // Xóa tất cả chữ hiện tại với hiệu ứng
+                let lettersToRemove = gridCells
+                    .map((cell, index) => ({ cell, index }))
+                    .filter(({ cell }) => cell.hasLetter);
+                
+                lettersToRemove.forEach(({ cell, index }, i) => {
+                    setTimeout(() => {
+                        cell.element.classList.add('fade-out');
+                    }, i * 20);
+                    
+                    setTimeout(() => {
+                        cell.hasLetter = false;
+                        cell.letter = '';
+                        cell.element.textContent = '';
+                        cell.element.className = 'grid-cell';
+                        cell.element.classList.remove('fade-out');
+                    }, 500 + (i * 20));
+                });
+                
+                // Spawn từ mới sau khi xóa xong
+                setTimeout(() => {
+                    const priorityWords = targetWords.filter(word => 
+                        !completedWords.includes(word)
+                    );
+                    
+                    if (priorityWords.length > 0) {
+                        const easiestWord = priorityWords.reduce((shortest, current) => 
+                            current.length < shortest.length ? current : shortest
+                        );
+                        
+                        spawnMissingLetters(easiestWord);
+                        
+                        const feedback = document.getElementById('feedback');
+                        feedback.className = 'feedback hint';
+                        feedback.innerHTML = `🔄 Đã reset! Tập trung vào từ: <strong>${easiestWord.toUpperCase()}</strong>`;
+                        setTimeout(() => feedback.textContent = '', 3000);
+                    }
+                    
+                    // Cập nhật lượt reset
+                    resetCount++;
+                    updateResetButton();
+                    
+                }, 800);
+            }
+        }
+
+        function checkForResetReward() {
+            if (currentCombo >= 5 && resetCount > 0) {
+                resetCount = Math.max(0, resetCount - 1);
+                updateResetButton();
+                showMessage(`🎉 Combo ${currentCombo}! Bạn được thưởng thêm 1 lượt reset!`, 'correct');
+            }
+        }
+
+        function updateResetButton() {
+            const resetBtn = document.getElementById('resetGridBtn');
+            const remaining = MAX_RESETS - resetCount;
+            
+            if (remaining <= 0) {
+                resetBtn.disabled = true;
+                resetBtn.innerHTML = '🔄 Đã hết lượt';
+            } else {
+                resetBtn.disabled = false;
+                resetBtn.innerHTML = `🔄 Reset Grid (${remaining})`;
+                document.getElementById('resetCount').textContent = remaining;
+            }
+        }
+
+        // ==================== NÚT HINT ====================
         function useHint() {
             if (hintsRemaining <= 0 || isPaused || isGameOver) return;
             
@@ -1609,49 +1899,77 @@
                 randomHint.cell.element.classList.add('hint');
                 
                 hintsRemaining--;
-                document.getElementById('hintCount').textContent = hintsRemaining;
+                document.getElementById('hintCountFixed').textContent = hintsRemaining;
                 
                 const feedbackEl = document.getElementById('feedback');
                 feedbackEl.className = 'feedback hint';
                 feedbackEl.textContent = `💡 Gợi ý: Chữ "${hintLetter}" để bắt đầu từ "${randomWord}"!`;
+                
+                if (hintsRemaining <= 0) {
+                    document.getElementById('hintBtnFixed').disabled = true;
+                }
             } else {
-                const feedbackEl = document.getElementById('feedback');
-                feedbackEl.className = 'feedback wrong';
-                feedbackEl.textContent = '❌ Không tìm thấy chữ cái để gợi ý!';
-                setTimeout(() => {
-                    feedbackEl.textContent = '';
-                    feedbackEl.className = 'feedback';
-                }, 2000);
+                showMessage('❌ Không tìm thấy chữ cái để gợi ý!', 'error');
             }
         }
 
+        // ==================== PAUSE MENU ====================
         function togglePause() {
             isPaused = !isPaused;
-            document.getElementById('pauseOverlay').style.display = isPaused ? 'flex' : 'none';
+            
+            if (isPaused) {
+                document.getElementById('pauseOverlay').style.display = 'flex';
+                
+                if (gameMode === 'practice') {
+                    document.getElementById('practiceWordList').style.display = 'block';
+                    document.getElementById('encouragementMessage').style.display = 'none';
+                    
+                    const wordGrid = document.getElementById('pauseWordGrid');
+                    wordGrid.innerHTML = '';
+                    targetWords.forEach(word => {
+                        const span = document.createElement('span');
+                        span.className = completedWords.includes(word) ? 'completed' : '';
+                        span.textContent = word;
+                        wordGrid.appendChild(span);
+                    });
+                } else {
+                    document.getElementById('practiceWordList').style.display = 'none';
+                    document.getElementById('encouragementMessage').style.display = 'block';
+                    
+                    const encouragements = [
+                        "Bạn ghép từ siêu nhanh! 🚀",
+                        "Tiếp tục phát huy nhé! 🔥",
+                        "Bạn là nhà vô địch! 🏆",
+                        "Tuyệt vời! Không gì khó được bạn! 💪",
+                        "Mỗi từ là một bước tiến! 📈",
+                        "Bạn đang làm rất tốt! 👏"
+                    ];
+                    const randomMsg = encouragements[Math.floor(Math.random() * encouragements.length)];
+                    document.getElementById('randomEncouragement').textContent = randomMsg;
+                }
+            } else {
+                document.getElementById('pauseOverlay').style.display = 'none';
+            }
+            
             document.getElementById('pauseBtn').textContent = isPaused ? '▶️ Resume' : '⏸️ Pause';
         }
 
-        function endGameEarly() {
-            if (confirm('Bạn có chắc muốn kết thúc game sớm? Điểm số hiện tại sẽ được lưu lại.')) {
-                endGame(false);
-            }
-        }
-
+        // ==================== TĂNG TỐC ĐỘ ====================
         function increaseSpeed() {
             speedLevel++;
             document.getElementById('speedLevel').textContent = speedLevel;
             
-            // Tăng tốc độ spawn
             spawnDelay = Math.max(1500, 5000 - (speedLevel * 1000));
             
             clearInterval(letterSpawnInterval);
             letterSpawnInterval = setInterval(() => {
                 if (!isPaused && !isGameOver) {
-                    spawnLetter();
+                    smartSpawn();
                 }
             }, spawnDelay);
         }
 
+        // ==================== CẬP NHẬT TIẾN ĐỘ ====================
         function updateProgress() {
             const progress = (completedWords.length / targetWords.length) * 100;
             document.getElementById('progressBar').style.width = progress + '%';
@@ -1659,10 +1977,19 @@
             document.getElementById('progressText').textContent = `${completedWords.length} / ${targetWords.length}`;
         }
 
+        // ==================== KẾT THÚC GAME ====================
+        function endGameEarly() {
+            if (confirm('Bạn có chắc muốn kết thúc game sớm? Điểm số hiện tại sẽ được lưu lại.')) {
+                endGame(false);
+            }
+        }
+
         function endGame(completed) {
             isGameOver = true;
             clearInterval(letterSpawnInterval);
             document.getElementById('endGameBtn').style.display = 'none';
+            document.getElementById('hintBtnFixed').style.display = 'none';
+            document.getElementById('resetGridBtn').style.display = 'none';
             
             const modal = document.getElementById('gameOverModal');
             const modalTitle = document.getElementById('modalTitle');
@@ -1701,16 +2028,6 @@
                     wordItem.textContent = word;
                     bonusWordsList.appendChild(wordItem);
                 });
-                
-                // Thêm thông báo đặc biệt về từ mở rộng
-                const bonusMessage = document.createElement('div');
-                bonusMessage.style.marginTop = '10px';
-                bonusMessage.style.padding = '10px';
-                bonusMessage.style.backgroundColor = '#fff9e6';
-                bonusMessage.style.borderRadius = '8px';
-                bonusMessage.style.fontSize = '14px';
-                bonusMessage.innerHTML = `🎉 Bạn đã tìm thấy <strong>${bonusWords.length}</strong> từ mở rộng!`;
-                bonusWordsSection.appendChild(bonusMessage);
             } else {
                 bonusWordsSection.style.display = 'none';
             }
@@ -1735,57 +2052,64 @@
         }
 
         function saveScore() {
-            const leaderboard = JSON.parse(localStorage.getItem('letterGridLeaderboard') || '[]');
-            
-            const entry = {
-                score: currentScore,
-                level: selectedLevel,
-                words: completedWords.length,
-                bonus: bonusWords.length,
-                date: new Date().toLocaleDateString('vi-VN')
-            };
-            
-            leaderboard.push(entry);
-            leaderboard.sort((a, b) => b.score - a.score);
-            leaderboard.splice(5);
-            
-            localStorage.setItem('letterGridLeaderboard', JSON.stringify(leaderboard));
+            try {
+                const leaderboard = JSON.parse(localStorage.getItem('letterGridLeaderboard') || '[]');
+                
+                const entry = {
+                    score: currentScore,
+                    level: selectedLevel,
+                    words: completedWords.length,
+                    bonus: bonusWords.length,
+                    date: new Date().toLocaleDateString('vi-VN')
+                };
+                
+                leaderboard.push(entry);
+                leaderboard.sort((a, b) => b.score - a.score);
+                leaderboard.splice(5);
+                
+                localStorage.setItem('letterGridLeaderboard', JSON.stringify(leaderboard));
+            } catch (e) {
+                console.log('Không thể lưu điểm:', e);
+            }
         }
 
         function showLeaderboard() {
-            const leaderboard = JSON.parse(localStorage.getItem('letterGridLeaderboard') || '[]');
-            const leaderboardSection = document.getElementById('leaderboardSection');
-            const leaderboardList = document.getElementById('leaderboardList');
-            
-            if (leaderboard.length === 0) {
-                leaderboardSection.style.display = 'none';
-                return;
+            try {
+                const leaderboard = JSON.parse(localStorage.getItem('letterGridLeaderboard') || '[]');
+                const leaderboardSection = document.getElementById('leaderboardSection');
+                const leaderboardList = document.getElementById('leaderboardList');
+                
+                if (leaderboard.length === 0) {
+                    leaderboardSection.style.display = 'none';
+                    return;
+                }
+                
+                leaderboardSection.style.display = 'block';
+                leaderboardList.innerHTML = '';
+                
+                leaderboard.forEach((entry, index) => {
+                    const entryDiv = document.createElement('div');
+                    entryDiv.className = 'leaderboard-entry';
+                    if (index === 0) entryDiv.classList.add('top1');
+                    else if (index === 1) entryDiv.classList.add('top2');
+                    else if (index === 2) entryDiv.classList.add('top3');
+                    
+                    const rank = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : `#${index + 1}`;
+                    
+                    entryDiv.innerHTML = `
+                        <div><strong>${rank}</strong> Level ${entry.level} - ${entry.words} từ${entry.bonus ? ' (+' + entry.bonus + ' bonus)' : ''}</div>
+                        <div><strong>${entry.score}</strong> điểm</div>
+                    `;
+                    leaderboardList.appendChild(entryDiv);
+                });
+            } catch (e) {
+                console.log('Không thể hiển thị leaderboard:', e);
             }
-            
-            leaderboardSection.style.display = 'block';
-            leaderboardList.innerHTML = '';
-            
-            leaderboard.forEach((entry, index) => {
-                const entryDiv = document.createElement('div');
-                entryDiv.className = 'leaderboard-entry';
-                if (index === 0) entryDiv.classList.add('top1');
-                else if (index === 1) entryDiv.classList.add('top2');
-                else if (index === 2) entryDiv.classList.add('top3');
-                
-                const rank = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : `#${index + 1}`;
-                
-                entryDiv.innerHTML = `
-                    <div><strong>${rank}</strong> Level ${entry.level} - ${entry.words} từ${entry.bonus ? ' (+' + entry.bonus + ' bonus)' : ''}</div>
-                    <div><strong>${entry.score}</strong> điểm</div>
-                `;
-                leaderboardList.appendChild(entryDiv);
-            });
         }
 
         function playAgain() {
             document.getElementById('gameOverModal').style.display = 'none';
             document.getElementById('gameSection').style.display = 'none';
-            document.getElementById('endGameBtn').style.display = 'none';
             document.getElementById('modeSection').style.display = 'block';
             document.getElementById('setupSection').style.display = 'none';
             
@@ -1798,20 +2122,25 @@
             selectedUnit = '';
         }
 
+        // ==================== ÂM NHẠC ====================
         function initializeMusic() {
             if (!musicInitialized) {
                 const playMusic = () => {
-                    backgroundMusic.play().then(() => {
-                        isMusicPlaying = true;
-                        document.getElementById('musicToggle').textContent = '♫';
-                        document.getElementById('musicToggle').classList.remove('muted');
-                    }).catch(e => {
-                        console.log('Auto-play prevented:', e);
-                    });
-                    musicInitialized = true;
-                    document.removeEventListener('click', playMusic);
-                    document.removeEventListener('keydown', playMusic);
-                    document.removeEventListener('touchstart', playMusic);
+                    try {
+                        backgroundMusic.play().then(() => {
+                            isMusicPlaying = true;
+                            document.getElementById('musicToggle').textContent = '♫';
+                            document.getElementById('musicToggle').classList.remove('muted');
+                        }).catch(e => {
+                            console.log('Auto-play prevented:', e);
+                        });
+                        musicInitialized = true;
+                        document.removeEventListener('click', playMusic);
+                        document.removeEventListener('keydown', playMusic);
+                        document.removeEventListener('touchstart', playMusic);
+                    } catch (e) {
+                        console.log('Không thể phát nhạc:', e);
+                    }
                 };
                 
                 document.addEventListener('click', playMusic);
@@ -1823,22 +2152,43 @@
         function toggleMusic() {
             const musicBtn = document.getElementById('musicToggle');
             
-            if (isMusicPlaying) {
-                backgroundMusic.pause();
-                musicBtn.textContent = '♪';
-                musicBtn.classList.add('muted');
-                isMusicPlaying = false;
-            } else {
-                backgroundMusic.play().then(() => {
-                    musicBtn.textContent = '♫';
-                    musicBtn.classList.remove('muted');
-                    isMusicPlaying = true;
-                }).catch(e => {
-                    console.log('Play failed:', e);
-                    alert('Please interact with the page to enable audio');
-                });
+            try {
+                if (isMusicPlaying) {
+                    backgroundMusic.pause();
+                    musicBtn.textContent = '♪';
+                    musicBtn.classList.add('muted');
+                    isMusicPlaying = false;
+                } else {
+                    backgroundMusic.play().then(() => {
+                        musicBtn.textContent = '♫';
+                        musicBtn.classList.remove('muted');
+                        isMusicPlaying = true;
+                    }).catch(e => {
+                        console.log('Play failed:', e);
+                    });
+                }
+            } catch (e) {
+                console.log('Không thể toggle nhạc:', e);
             }
         }
+
+        // ==================== TIỆN ÍCH ====================
+        function showMessage(text, type = 'info') {
+            const feedback = document.getElementById('feedback');
+            feedback.className = `feedback ${type}`;
+            feedback.textContent = text;
+            setTimeout(() => {
+                feedback.textContent = '';
+                feedback.className = 'feedback';
+            }, 3000);
+        }
+
+        // ==================== XỬ LÝ RESIZE ====================
+        window.addEventListener('resize', function() {
+            if (document.getElementById('gameSection').style.display === 'block') {
+                initializeGrid();
+            }
+        });
     </script>
 </body>
 </html>
