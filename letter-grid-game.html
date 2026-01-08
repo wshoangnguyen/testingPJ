@@ -1102,7 +1102,7 @@
         let gridCells = [];
         let selectedCells = [];
         let letterSpawnInterval = null;
-        let spawnDelay = 4000; // Giảm từ 10000 xuống 7000ms (7 giây)
+        let spawnDelay = 5000; // Giảm từ 10000 xuống 7000ms (7 giây)
         let currentWordForSpawn = null;
         let lettersToSpawn = [];
 
@@ -1642,7 +1642,7 @@
             document.getElementById('speedLevel').textContent = speedLevel;
             
             // Tăng tốc độ spawn
-            spawnDelay = Math.max(2000, 7000 - (speedLevel * 800));
+            spawnDelay = Math.max(1500, 5000 - (speedLevel * 1000));
             
             clearInterval(letterSpawnInterval);
             letterSpawnInterval = setInterval(() => {
