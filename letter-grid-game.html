@@ -766,8 +766,8 @@
         /* Nút kết thúc cố định ở góc phải dưới */
         .fixed-end-btn {
             position: fixed;
-            top: 20px;
-            left: 20px;
+            bottom: 100px;
+            right: 20px;
             z-index: 100;
             width: 70px;
             height: 70px;
@@ -989,7 +989,7 @@
                 <div class="word-actions">
                     <button class="clear-btn" onclick="clearSelection()">🗑️ Xóa</button>
                     <button id="checkBtn" class="check-btn" onclick="checkWord()" disabled>✅ Check</button>
-                    <button id="pauseBtn" class="control-btn pause-btn" onclick="togglePause()">⏸️ Pause</button>
+                    <button id="resetBtn" class="control-btn reset-btn" onclick="useReset()">🔄 Reset (<span id="resetCount">3</span>)</button>
                     <button id="hintBtn" class="control-btn hint-btn" onclick="useHint()">💡 Hint (<span id="hintCount">3</span>)</button>
                 </div>
             </div>
