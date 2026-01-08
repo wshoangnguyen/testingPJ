@@ -1214,122 +1214,194 @@
             }
         }
 
-        function spawnSpecificWord(word) {
-            const letters = word.split('').map(l => l.toUpperCase());
-            const emptyCells = gridCells
-                .map((cell, index) => ({ cell, index }))
-                .filter(({ cell }) => !cell.hasLetter);
-            
-            if (emptyCells.length === 0) {
-                console.log('Không còn ô trống cho từ:', word);
-                return false;
+function spawnSpecificWord(word) {
+    const letters = word.split('').map(l => l.toUpperCase());
+    const emptyCells = gridCells
+        .map((cell, index) => ({ cell, index }))
+        .filter(({ cell }) => !cell.hasLetter);
+    
+    if (emptyCells.length === 0) {
+        console.log('Không còn ô trống cho từ:', word);
+        return false;
+    }
+    
+    // Nếu không đủ ô trống cho toàn bộ từ
+    if (emptyCells.length < letters.length) {
+        console.log('Không đủ ô trống cho từ đầy đủ:', word);
+        
+        // Spawn càng nhiều chữ càng tốt vào các ô trống ngẫu nhiên
+        const cellsToUse = emptyCells.sort(() => Math.random() - 0.5);
+        
+        cellsToUse.forEach(({ cell, index }, i) => {
+            if (i < letters.length) {
+                cell.letter = letters[i];
+                cell.hasLetter = true;
+                cell.element.textContent = letters[i];
+                cell.element.classList.add('has-letter');
             }
-            
-            const cellsToUse = emptyCells.slice(0, Math.min(letters.length, emptyCells.length));
-            const shuffledCells = [...cellsToUse].sort(() => Math.random() - 0.5);
-            
-            shuffledCells.forEach(({ cell, index }, i) => {
-                if (i < letters.length) {
-                    cell.letter = letters[i];
-                    cell.hasLetter = true;
-                    cell.element.textContent = letters[i];
-                    cell.element.classList.add('has-letter');
-                }
-            });
-            
-            console.log('Spawn từ:', word, 'vào', cellsToUse.length, 'ô');
-            return cellsToUse.length > 0;
-        }
+        });
+        
+        console.log('Đã spawn', Math.min(cellsToUse.length, letters.length), 'chữ của từ', word);
+        return cellsToUse.length > 0;
+    }
+    
+    // Nếu đủ ô trống: chọn ngẫu nhiên các ô cho từng chữ
+    const shuffledEmptyCells = [...emptyCells].sort(() => Math.random() - 0.5);
+    const selectedCells = shuffledEmptyCells.slice(0, letters.length);
+    
+    selectedCells.forEach(({ cell, index }, i) => {
+        cell.letter = letters[i];
+        cell.hasLetter = true;
+        cell.element.textContent = letters[i];
+        cell.element.classList.add('has-letter');
+    });
+    
+    console.log('Spawn từ:', word, 'vào', selectedCells.length, 'ô ngẫu nhiên');
+    return true;
+}
 
-        function smartSpawn(isFullWord = false) {
-            if (isGameOver || isPaused) return;
-            
-            const uncompletedWords = targetWords.filter(word => 
-                !completedWords.includes(word) && 
-                !bonusWords.includes(word)
-            );
-            
-            if (uncompletedWords.length === 0) {
-                const availableExpansionWords = expansionVocab.filter(word => 
-                    !bonusWords.includes(word) && 
-                    !completedWords.includes(word)
-                );
-                
-                if (availableExpansionWords.length > 0) {
-                    const word = availableExpansionWords[Math.floor(Math.random() * availableExpansionWords.length)];
-                    spawnSpecificWord(word);
-                    return;
-                }
-                return;
-            }
-            
-            const gridLetters = gridCells
-                .filter(cell => cell.hasLetter)
-                .map(cell => cell.letter.toLowerCase());
-            
-            const spawnableWords = uncompletedWords.filter(word => {
-                const wordLetters = word.split('');
-                const missingLetters = wordLetters.filter(letter => 
-                    !gridLetters.includes(letter)
-                );
-                
-                if (isFullWord) {
-                    return true;
-                } else {
-                    return missingLetters.length > 0;
-                }
-            });
-            
-            if (spawnableWords.length === 0) {
-                const randomWord = uncompletedWords[Math.floor(Math.random() * uncompletedWords.length)];
-                if (isFullWord) {
-                    spawnSpecificWord(randomWord);
-                } else {
-                    spawnSingleLetterForWord(randomWord);
-                }
-                return;
-            }
-            
-            const selectedWord = spawnableWords[Math.floor(Math.random() * spawnableWords.length)];
-            
-            if (isFullWord) {
-                spawnSpecificWord(selectedWord);
-            } else {
-                spawnSingleLetterForWord(selectedWord);
-            }
+function smartSpawn(isFullWord = false) {
+    if (isGameOver || isPaused) return;
+    
+    // Tìm các từ chưa hoàn thành
+    const uncompletedWords = targetWords.filter(word => 
+        !completedWords.includes(word) && 
+        !bonusWords.includes(word)
+    );
+    
+    if (uncompletedWords.length === 0) {
+        // Nếu không còn từ nào, spawn từ mở rộng
+        const availableExpansionWords = expansionVocab.filter(word => 
+            !bonusWords.includes(word) && 
+            !completedWords.includes(word)
+        );
+        
+        if (availableExpansionWords.length > 0) {
+            const word = availableExpansionWords[Math.floor(Math.random() * availableExpansionWords.length)];
+            spawnSpecificWord(word);
+            return;
         }
+        return;
+    }
+    
+    // Tìm các từ có thể spawn dựa trên chữ hiện có
+    const gridLetters = gridCells
+        .filter(cell => cell.hasLetter)
+        .map(cell => cell.letter.toLowerCase());
+    
+    // Phân loại từ:
+    // 1. Từ có thể hoàn thành ngay (đã có đủ chữ trên grid)
+    const completableWords = uncompletedWords.filter(word => {
+        const wordLetters = word.split('');
+        return wordLetters.every(letter => 
+            gridLetters.includes(letter)
+        );
+    });
+    
+    // 2. Từ đang thiếu chữ
+    const incompleteWords = uncompletedWords.filter(word => {
+        const wordLetters = word.split('');
+        const missingLetters = wordLetters.filter(letter => 
+            !gridLetters.includes(letter)
+        );
+        return missingLetters.length > 0;
+    });
+    
+    let selectedWord;
+    
+    if (isFullWord) {
+        // Khi spawn toàn bộ từ (sau khi ghép đúng):
+        // Ưu tiên spawn từ đang thiếu chữ
+        if (incompleteWords.length > 0) {
+            selectedWord = incompleteWords[Math.floor(Math.random() * incompleteWords.length)];
+        } else if (completableWords.length > 0) {
+            selectedWord = completableWords[Math.floor(Math.random() * completableWords.length)];
+        } else {
+            selectedWord = uncompletedWords[Math.floor(Math.random() * uncompletedWords.length)];
+        }
+        
+        spawnSpecificWord(selectedWord);
+    } else {
+        // Khi spawn từng chữ (timer):
+        // Ưu tiên spawn chữ cho từ đang thiếu
+        if (incompleteWords.length > 0) {
+            selectedWord = incompleteWords[Math.floor(Math.random() * incompleteWords.length)];
+        } else {
+            selectedWord = uncompletedWords[Math.floor(Math.random() * uncompletedWords.length)];
+        }
+        
+        spawnSingleLetterForWord(selectedWord);
+    }
+    
+    console.log('Smart spawn:', isFullWord ? 'full word' : 'single letter', '- Selected:', selectedWord);
+}
 
-        function spawnSingleLetterForWord(word) {
-            const wordLetters = word.toUpperCase().split('');
-            const gridLetters = gridCells
-                .filter(cell => cell.hasLetter)
-                .map(cell => cell.letter);
-            
-            const missingLetters = wordLetters.filter(letter => 
-                !gridLetters.includes(letter)
-            );
-            
-            if (missingLetters.length === 0) {
-                const randomLetter = wordLetters[Math.floor(Math.random() * wordLetters.length)];
-                spawnSingleLetter(randomLetter);
-            } else {
-                const letterToSpawn = missingLetters[Math.floor(Math.random() * missingLetters.length)];
-                spawnSingleLetter(letterToSpawn);
-            }
-        }
+function spawnSingleLetterForWord(word) {
+    const wordLetters = word.toUpperCase().split('');
+    const gridLetters = gridCells
+        .filter(cell => cell.hasLetter)
+        .map(cell => cell.letter);
+    
+    // Tìm chữ cái chưa có trên grid
+    const missingLetters = wordLetters.filter(letter => 
+        !gridLetters.includes(letter)
+    );
+    
+    let letterToSpawn;
+    
+    if (missingLetters.length === 0) {
+        // Nếu tất cả chữ đều có trên grid, chọn ngẫu nhiên 1 chữ
+        letterToSpawn = wordLetters[Math.floor(Math.random() * wordLetters.length)];
+    } else {
+        // Spawn chữ còn thiếu
+        letterToSpawn = missingLetters[Math.floor(Math.random() * missingLetters.length)];
+    }
+    
+    // Tìm ô trống ngẫu nhiên
+    const emptyCells = gridCells
+        .map((cell, index) => ({ cell, index }))
+        .filter(({ cell }) => !cell.hasLetter);
+    
+    if (emptyCells.length === 0) {
+        console.log('Không còn ô trống để spawn chữ:', letterToSpawn);
+        return false;
+    }
+    
+    // Chọn ô trống ngẫu nhiên
+    const randomIndex = Math.floor(Math.random() * emptyCells.length);
+    const { cell, index } = emptyCells[randomIndex];
+    
+    cell.letter = letterToSpawn;
+    cell.hasLetter = true;
+    cell.element.textContent = letterToSpawn;
+    cell.element.classList.add('has-letter');
+    
+    console.log('Spawn chữ', letterToSpawn, 'cho từ', word, 'tại ô', index);
+    return true;
+}
 
-        function spawnSingleLetter(letter) {
-            const emptyCells = gridCells.filter(cell => !cell.hasLetter);
-            if (emptyCells.length === 0) return false;
-            
-            const randomCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
-            randomCell.letter = letter;
-            randomCell.hasLetter = true;
-            randomCell.element.textContent = letter;
-            randomCell.element.classList.add('has-letter');
-            
-            return true;
-        }
+function spawnSingleLetter(letter) {
+    const emptyCells = gridCells
+        .map((cell, index) => ({ cell, index }))
+        .filter(({ cell }) => !cell.hasLetter);
+    
+    if (emptyCells.length === 0) {
+        console.log('Không còn ô trống để spawn chữ:', letter);
+        return false;
+    }
+    
+    // Chọn ô trống ngẫu nhiên
+    const randomIndex = Math.floor(Math.random() * emptyCells.length);
+    const { cell, index } = emptyCells[randomIndex];
+    
+    cell.letter = letter;
+    cell.hasLetter = true;
+    cell.element.textContent = letter;
+    cell.element.classList.add('has-letter');
+    
+    console.log('Spawn chữ', letter, 'tại ô ngẫu nhiên:', index);
+    return true;
+}
 
         function spawnLetter() {
             if (isGameOver || isPaused) return;
