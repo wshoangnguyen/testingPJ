@@ -707,19 +707,10 @@
             background: #95a5a6;
         }
 
-        /* NHÓM NÚT TRỢ GIÚP GÓC TRÁI DƯỚI */
-        .helper-group {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 100;
-            display: flex;
-            gap: 10px;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
+        /* NÚT TRỢ GIÚP MỚI */
         .helper-btn {
+            position: fixed;
+            z-index: 100;
             padding: 12px 20px;
             font-size: 16px;
             font-weight: bold;
@@ -729,78 +720,76 @@
             transition: all 0.3s;
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
             color: white;
-            min-width: 140px;
-            text-align: center;
-        }
-
-        .hint-btn {
-            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
-        }
-
-        .hint-btn:hover {
-            background: linear-gradient(135deg, #8e44ad 0%, #732d91 100%);
-            transform: translateX(5px) scale(1.05);
         }
 
         .reset-btn {
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            bottom: 90px;
+            right: 20px;
         }
 
         .reset-btn:hover {
-            background: linear-gradient(135deg, #2980b9 0%, #21618c 100%);
-            transform: translateX(5px) scale(1.05);
+            background: linear-gradient(135deg, #8e44ad 0%, #732d91 100%);
+            transform: scale(1.05);
         }
 
-        .helper-btn:disabled {
+        .reset-btn:disabled {
             opacity: 0.5;
             cursor: not-allowed;
             transform: none !important;
             background: #95a5a6 !important;
         }
 
-        /* NÚT KẾT THÚC TRONG WORD-ACTIONS */
-        .end-game-btn {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            padding: 10px 20px;
+        .hint-btn-fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            padding: 12px 20px;
             font-size: 16px;
-            border-radius: 8px;
+            font-weight: bold;
             border: none;
-            color: white;
+            border-radius: 10px;
             cursor: pointer;
             transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            color: white;
+            z-index: 100;
+        }
+
+        .hint-btn-fixed:hover {
+            transform: scale(1.05);
+        }
+
+        .hint-btn-fixed:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .end-game-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 100;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .end-game-btn:hover {
-            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        }
-
-        /* HIỆU ỨNG PULSE CHO NÚT TRỢ GIÚP */
-        @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
-            50% { box-shadow: 0 4px 15px rgba(155, 89, 182, 0.5); }
-        }
-
-        @keyframes pulseGlowBlue {
-            0%, 100% { box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
-            50% { box-shadow: 0 4px 15px rgba(52, 152, 219, 0.5); }
-        }
-
-        .hint-btn:not(:disabled) {
-            animation: pulseGlow 2s infinite;
-        }
-
-        .reset-btn:not(:disabled) {
-            animation: pulseGlowBlue 2s infinite;
-        }
-
-        .helper-group:hover .hint-btn:not(:disabled) {
-            animation: none;
-        }
-
-        .helper-group:hover .reset-btn:not(:disabled) {
-            animation: none;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
         }
 
         .pause-overlay {
@@ -933,50 +922,24 @@
                 font-size: 20px;
             }
             
-            .helper-group {
-                bottom: 15px;
-                left: 15px;
-                gap: 8px;
-            }
-            
-            .helper-btn {
+            .helper-btn, .hint-btn-fixed, .end-game-btn {
                 padding: 10px 15px;
                 font-size: 14px;
-                min-width: 120px;
             }
             
-            .word-actions {
-                gap: 8px;
+            .reset-btn {
+                bottom: 80px;
+                right: 15px;
             }
             
-            .end-game-btn {
-                padding: 8px 15px;
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .helper-group {
-                flex-direction: row;
-                bottom: 10px;
-                left: 10px;
-                right: 10px;
-                justify-content: center;
-            }
-            
-            .helper-btn {
-                flex: 1;
-                min-width: auto;
-            }
-            
-            .word-actions {
-                flex-wrap: wrap;
+            .hint-btn-fixed {
+                bottom: 15px;
+                right: 15px;
             }
             
             .end-game-btn {
-                order: 4;
-                width: 100%;
-                margin-top: 10px;
+                bottom: 15px;
+                left: 15px;
             }
         }
     </style>
@@ -991,15 +954,18 @@
         <button id="musicToggle" class="music-btn" onclick="toggleMusic()">♫</button>
     </div>
 
-    <!-- NHÓM NÚT TRỢ GIÚP GÓC TRÁI DƯỚI -->
-    <div class="helper-group" style="display: none;">
-        <button id="hintBtnFixed" class="helper-btn hint-btn" onclick="useHint()">
-            💡 Hint (<span id="hintCountFixed">3</span>)
-        </button>
-        <button id="resetGridBtn" class="helper-btn reset-btn" onclick="resetGrid()">
-            🔄 Reset (<span id="resetCount">3</span>)
-        </button>
-    </div>
+    <!-- NÚT TRỢ GIÚP CỐ ĐỊNH -->
+    <button id="hintBtnFixed" class="hint-btn-fixed" onclick="useHint()" style="display: none;">
+        💡 Hint (<span id="hintCountFixed">3</span>)
+    </button>
+    
+    <button id="resetGridBtn" class="helper-btn reset-btn" onclick="resetGrid()" style="display: none;">
+        🔄 Reset Grid (<span id="resetCount">3</span>)
+    </button>
+    
+    <button id="endGameBtn" class="end-game-btn" onclick="endGameEarly()" style="display: none;">
+        🏁 Kết Thúc
+    </button>
 
     <div class="container">
         <h1>🎯 Letter Grid Collector 🎯</h1>
@@ -1084,9 +1050,6 @@
                     <button class="clear-btn" onclick="clearSelection()">🗑️ Xóa</button>
                     <button id="checkBtn" class="check-btn" onclick="checkWord()" disabled>✅ Check</button>
                     <button id="pauseBtn" class="control-btn pause-btn" onclick="togglePause()">⏸️ Pause</button>
-                    <button id="endGameBtn" class="control-btn end-game-btn" onclick="endGameEarly()" style="display: none;">
-                        🏁 Kết Thúc
-                    </button>
                 </div>
             </div>
 
@@ -1305,13 +1268,14 @@
         let hintCellIndex = -1;
         let currentTargetWord = null;
         let lastGridCheck = 0;
-        const GRID_CHECK_INTERVAL = 2000;
+        const GRID_CHECK_INTERVAL = 2000; // 2 giây
 
         const gridSize = 10;
         let gridCells = [];
         let selectedCells = [];
         let letterSpawnInterval = null;
-        let spawnDelay = 5000;
+        let spawnDelay = 5000; // Giảm xuống 5 giây
+        let lettersOnGrid = [];
 
         // ==================== HỆ THỐNG SPAWN THÔNG MINH ====================
         function getCurrentLetters() {
@@ -1362,6 +1326,7 @@
                     const missing = getMissingLetters(word, currentLetters);
                     const completion = ((word.length - missing.length) / word.length) * 100;
                     
+                    // Ưu tiên từ có completion cao và ít chữ còn thiếu
                     if (completion > bestCompletion || 
                         (completion === bestCompletion && missing.length < bestMissing)) {
                         bestWord = word;
@@ -1380,12 +1345,14 @@
             
             if (missing.length === 0) return false;
             
+            // Spawn chữ còn thiếu
             const emptyCells = gridCells
                 .map((cell, index) => ({ cell, index }))
                 .filter(({ cell }) => !cell.hasLetter);
             
             if (emptyCells.length === 0) return false;
             
+            // Spawn tối đa số chữ còn thiếu hoặc số ô trống
             const lettersToSpawn = missing.slice(0, Math.min(missing.length, emptyCells.length));
             const shuffledCells = [...emptyCells].sort(() => Math.random() - 0.5);
             
@@ -1418,6 +1385,7 @@
             
             lastGridCheck = now;
             
+            // Tìm từ tốt nhất để spawn
             currentTargetWord = findBestTargetWord();
             
             if (currentTargetWord) {
@@ -1431,6 +1399,7 @@
             const emptyCells = gridCells.filter(cell => !cell.hasLetter);
             if (emptyCells.length === 0) return;
             
+            // Lấy chữ cái ngẫu nhiên từ các từ chưa hoàn thành
             const uncompletedWords = targetWords.filter(word => !completedWords.includes(word));
             if (uncompletedWords.length === 0) return;
             
@@ -1587,11 +1556,11 @@
             document.getElementById('modeSection').style.display = 'none';
             document.getElementById('setupSection').style.display = 'none';
             document.getElementById('gameSection').style.display = 'block';
-            document.getElementById('endGameBtn').style.display = 'inline-block';
-            document.querySelector('.helper-group').style.display = 'flex';
-            
-            // Cập nhật nút trợ giúp
-            updateHelperButtons();
+            document.getElementById('endGameBtn').style.display = 'block';
+            document.getElementById('hintBtnFixed').style.display = 'block';
+            document.getElementById('resetGridBtn').style.display = 'block';
+            document.getElementById('resetGridBtn').disabled = false;
+            document.getElementById('resetGridBtn').innerHTML = `🔄 Reset Grid (${MAX_RESETS})`;
             
             initializeGrid();
             
@@ -1608,7 +1577,8 @@
             // Nếu là chế độ practice, pause ngay để xem từ
             if (gameMode === 'practice') {
                 setTimeout(() => {
-                    initialPause();
+                    isPaused = true;
+                    togglePause();
                 }, 800);
             }
         }
@@ -1620,77 +1590,6 @@
                     smartSpawn();
                 }
             }, spawnDelay);
-        }
-
-        // ==================== PAUSE TỰ ĐỘNG KHI BẮT ĐẦU ====================
-        function initialPause() {
-            isPaused = true;
-            document.getElementById('pauseOverlay').style.display = 'flex';
-            document.getElementById('pauseBtn').textContent = '▶️ Resume';
-            
-            // Hiển thị danh sách từ
-            document.getElementById('practiceWordList').style.display = 'block';
-            document.getElementById('encouragementMessage').style.display = 'none';
-            
-            const wordGrid = document.getElementById('pauseWordGrid');
-            wordGrid.innerHTML = '';
-            targetWords.forEach(word => {
-                const span = document.createElement('span');
-                span.className = completedWords.includes(word) ? 'completed' : '';
-                span.textContent = word;
-                wordGrid.appendChild(span);
-            });
-            
-            // Dừng spawn
-            clearInterval(letterSpawnInterval);
-        }
-
-        // ==================== TOGGLE PAUSE ====================
-        function togglePause() {
-            isPaused = !isPaused;
-            
-            if (isPaused) {
-                document.getElementById('pauseOverlay').style.display = 'flex';
-                
-                if (gameMode === 'practice') {
-                    document.getElementById('practiceWordList').style.display = 'block';
-                    document.getElementById('encouragementMessage').style.display = 'none';
-                    
-                    const wordGrid = document.getElementById('pauseWordGrid');
-                    wordGrid.innerHTML = '';
-                    targetWords.forEach(word => {
-                        const span = document.createElement('span');
-                        span.className = completedWords.includes(word) ? 'completed' : '';
-                        span.textContent = word;
-                        wordGrid.appendChild(span);
-                    });
-                } else {
-                    document.getElementById('practiceWordList').style.display = 'none';
-                    document.getElementById('encouragementMessage').style.display = 'block';
-                    
-                    const encouragements = [
-                        "Bạn ghép từ siêu nhanh! 🚀",
-                        "Tiếp tục phát huy nhé! 🔥",
-                        "Bạn là nhà vô địch! 🏆",
-                        "Tuyệt vời! Không gì khó được bạn! 💪",
-                        "Mỗi từ là một bước tiến! 📈",
-                        "Bạn đang làm rất tốt! 👏"
-                    ];
-                    const randomMsg = encouragements[Math.floor(Math.random() * encouragements.length)];
-                    document.getElementById('randomEncouragement').textContent = randomMsg;
-                }
-                
-                // Dừng spawn khi pause
-                clearInterval(letterSpawnInterval);
-            } else {
-                document.getElementById('pauseOverlay').style.display = 'none';
-                // Tiếp tục spawn khi resume
-                if (!isGameOver) {
-                    startLetterSpawning();
-                }
-            }
-            
-            document.getElementById('pauseBtn').textContent = isPaused ? '▶️ Resume' : '⏸️ Pause';
         }
 
         // ==================== CHỌN Ô ====================
@@ -1729,6 +1628,7 @@
             
             const currentWord = selectedCells.map(i => gridCells[i].letter).join('').toLowerCase();
             
+            // Kiểm tra trong targetWords (từ vựng bài học)
             const matchingWord = targetWords.find(word => 
                 word === currentWord && !completedWords.includes(word)
             );
@@ -1738,6 +1638,7 @@
                 return;
             }
             
+            // Kiểm tra trong từ vựng mở rộng
             const expansionMatch = expansionVocab.find(word => 
                 word === currentWord && !bonusWords.includes(word)
             );
@@ -1747,6 +1648,7 @@
                 return;
             }
             
+            // Kiểm tra trong toàn bộ thư viện
             const allVocabMatch = allVocabWords.find(word => 
                 word === currentWord && !completedWords.includes(word) && !bonusWords.includes(word)
             );
@@ -1813,6 +1715,7 @@
                 feedbackEl.className = 'feedback';
             }, 2000);
             
+            // Xóa các ô đã chọn với hiệu ứng
             selectedCells.forEach((index, i) => {
                 const cell = gridCells[index];
                 setTimeout(() => {
@@ -1834,8 +1737,10 @@
             selectedCells = [];
             updateCurrentWord();
             
+            // Kiểm tra thưởng lượt reset
             checkForResetReward();
             
+            // Spawn từ mới ngay lập tức sau khi check đúng
             setTimeout(() => {
                 if (!isGameOver) {
                     smartSpawn();
@@ -1886,33 +1791,87 @@
             updateCurrentWord();
         }
 
-        // ==================== NÚT TRỢ GIÚP ====================
-        function updateHelperButtons() {
-            const resetBtn = document.getElementById('resetGridBtn');
-            const hintBtn = document.getElementById('hintBtnFixed');
-            const remainingResets = MAX_RESETS - resetCount;
+        // ==================== NÚT RESET GRID ====================
+        function resetGrid() {
+            if (resetCount >= MAX_RESETS) {
+                showMessage('Bạn đã hết lượt reset! Hãy cố gắng ghép từ nhé!', 'error');
+                return;
+            }
             
-            // Cập nhật nút Reset
-            if (remainingResets <= 0) {
+            if (confirm(`Reset grid để nhận chữ mới? (Còn ${MAX_RESETS - resetCount} lượt)`)) {
+                const resetBtn = document.getElementById('resetGridBtn');
+                resetBtn.disabled = true;
+                resetBtn.innerHTML = '⏳ Đang reset...';
+                
+                // Xóa tất cả chữ hiện tại với hiệu ứng
+                let lettersToRemove = gridCells
+                    .map((cell, index) => ({ cell, index }))
+                    .filter(({ cell }) => cell.hasLetter);
+                
+                lettersToRemove.forEach(({ cell, index }, i) => {
+                    setTimeout(() => {
+                        cell.element.classList.add('fade-out');
+                    }, i * 20);
+                    
+                    setTimeout(() => {
+                        cell.hasLetter = false;
+                        cell.letter = '';
+                        cell.element.textContent = '';
+                        cell.element.className = 'grid-cell';
+                        cell.element.classList.remove('fade-out');
+                    }, 500 + (i * 20));
+                });
+                
+                // Spawn từ mới sau khi xóa xong
+                setTimeout(() => {
+                    const priorityWords = targetWords.filter(word => 
+                        !completedWords.includes(word)
+                    );
+                    
+                    if (priorityWords.length > 0) {
+                        const easiestWord = priorityWords.reduce((shortest, current) => 
+                            current.length < shortest.length ? current : shortest
+                        );
+                        
+                        spawnMissingLetters(easiestWord);
+                        
+                        const feedback = document.getElementById('feedback');
+                        feedback.className = 'feedback hint';
+                        feedback.innerHTML = `🔄 Đã reset! Tập trung vào từ: <strong>${easiestWord.toUpperCase()}</strong>`;
+                        setTimeout(() => feedback.textContent = '', 3000);
+                    }
+                    
+                    // Cập nhật lượt reset
+                    resetCount++;
+                    updateResetButton();
+                    
+                }, 800);
+            }
+        }
+
+        function checkForResetReward() {
+            if (currentCombo >= 5 && resetCount > 0) {
+                resetCount = Math.max(0, resetCount - 1);
+                updateResetButton();
+                showMessage(`🎉 Combo ${currentCombo}! Bạn được thưởng thêm 1 lượt reset!`, 'correct');
+            }
+        }
+
+        function updateResetButton() {
+            const resetBtn = document.getElementById('resetGridBtn');
+            const remaining = MAX_RESETS - resetCount;
+            
+            if (remaining <= 0) {
                 resetBtn.disabled = true;
                 resetBtn.innerHTML = '🔄 Đã hết lượt';
             } else {
                 resetBtn.disabled = false;
-                resetBtn.innerHTML = `🔄 Reset (${remainingResets})`;
-                document.getElementById('resetCount').textContent = remainingResets;
-            }
-            
-            // Cập nhật nút Hint
-            if (hintsRemaining <= 0) {
-                hintBtn.disabled = true;
-                hintBtn.innerHTML = '💡 Đã hết lượt';
-            } else {
-                hintBtn.disabled = false;
-                hintBtn.innerHTML = `💡 Hint (${hintsRemaining})`;
-                document.getElementById('hintCountFixed').textContent = hintsRemaining;
+                resetBtn.innerHTML = `🔄 Reset Grid (${remaining})`;
+                document.getElementById('resetCount').textContent = remaining;
             }
         }
 
+        // ==================== NÚT HINT ====================
         function useHint() {
             if (hintsRemaining <= 0 || isPaused || isGameOver) return;
             
@@ -1940,76 +1899,59 @@
                 randomHint.cell.element.classList.add('hint');
                 
                 hintsRemaining--;
-                updateHelperButtons();
+                document.getElementById('hintCountFixed').textContent = hintsRemaining;
                 
                 const feedbackEl = document.getElementById('feedback');
                 feedbackEl.className = 'feedback hint';
                 feedbackEl.textContent = `💡 Gợi ý: Chữ "${hintLetter}" để bắt đầu từ "${randomWord}"!`;
+                
+                if (hintsRemaining <= 0) {
+                    document.getElementById('hintBtnFixed').disabled = true;
+                }
             } else {
                 showMessage('❌ Không tìm thấy chữ cái để gợi ý!', 'error');
             }
         }
 
-        function resetGrid() {
-            if (resetCount >= MAX_RESETS) {
-                showMessage('Bạn đã hết lượt reset! Hãy cố gắng ghép từ nhé!', 'error');
-                return;
+        // ==================== PAUSE MENU ====================
+        function togglePause() {
+            isPaused = !isPaused;
+            
+            if (isPaused) {
+                document.getElementById('pauseOverlay').style.display = 'flex';
+                
+                if (gameMode === 'practice') {
+                    document.getElementById('practiceWordList').style.display = 'block';
+                    document.getElementById('encouragementMessage').style.display = 'none';
+                    
+                    const wordGrid = document.getElementById('pauseWordGrid');
+                    wordGrid.innerHTML = '';
+                    targetWords.forEach(word => {
+                        const span = document.createElement('span');
+                        span.className = completedWords.includes(word) ? 'completed' : '';
+                        span.textContent = word;
+                        wordGrid.appendChild(span);
+                    });
+                } else {
+                    document.getElementById('practiceWordList').style.display = 'none';
+                    document.getElementById('encouragementMessage').style.display = 'block';
+                    
+                    const encouragements = [
+                        "Bạn ghép từ siêu nhanh! 🚀",
+                        "Tiếp tục phát huy nhé! 🔥",
+                        "Bạn là nhà vô địch! 🏆",
+                        "Tuyệt vời! Không gì khó được bạn! 💪",
+                        "Mỗi từ là một bước tiến! 📈",
+                        "Bạn đang làm rất tốt! 👏"
+                    ];
+                    const randomMsg = encouragements[Math.floor(Math.random() * encouragements.length)];
+                    document.getElementById('randomEncouragement').textContent = randomMsg;
+                }
+            } else {
+                document.getElementById('pauseOverlay').style.display = 'none';
             }
             
-            if (confirm(`Reset grid để nhận chữ mới? (Còn ${MAX_RESETS - resetCount} lượt)`)) {
-                const resetBtn = document.getElementById('resetGridBtn');
-                resetBtn.disabled = true;
-                resetBtn.innerHTML = '⏳ Đang reset...';
-                
-                let lettersToRemove = gridCells
-                    .map((cell, index) => ({ cell, index }))
-                    .filter(({ cell }) => cell.hasLetter);
-                
-                lettersToRemove.forEach(({ cell, index }, i) {
-                    setTimeout(() => {
-                        cell.element.classList.add('fade-out');
-                    }, i * 20);
-                    
-                    setTimeout(() => {
-                        cell.hasLetter = false;
-                        cell.letter = '';
-                        cell.element.textContent = '';
-                        cell.element.className = 'grid-cell';
-                        cell.element.classList.remove('fade-out');
-                    }, 500 + (i * 20));
-                });
-                
-                setTimeout(() => {
-                    const priorityWords = targetWords.filter(word => 
-                        !completedWords.includes(word)
-                    );
-                    
-                    if (priorityWords.length > 0) {
-                        const easiestWord = priorityWords.reduce((shortest, current) => 
-                            current.length < shortest.length ? current : shortest
-                        );
-                        
-                        spawnMissingLetters(easiestWord);
-                        
-                        const feedback = document.getElementById('feedback');
-                        feedback.className = 'feedback hint';
-                        feedback.innerHTML = `🔄 Đã reset! Tập trung vào từ: <strong>${easiestWord.toUpperCase()}</strong>`;
-                        setTimeout(() => feedback.textContent = '', 3000);
-                    }
-                    
-                    resetCount++;
-                    updateHelperButtons();
-                    
-                }, 800);
-            }
-        }
-
-        function checkForResetReward() {
-            if (currentCombo >= 5 && resetCount > 0) {
-                resetCount = Math.max(0, resetCount - 1);
-                updateHelperButtons();
-                showMessage(`🎉 Combo ${currentCombo}! Bạn được thưởng thêm 1 lượt reset!`, 'correct');
-            }
+            document.getElementById('pauseBtn').textContent = isPaused ? '▶️ Resume' : '⏸️ Pause';
         }
 
         // ==================== TĂNG TỐC ĐỘ ====================
@@ -2046,7 +1988,8 @@
             isGameOver = true;
             clearInterval(letterSpawnInterval);
             document.getElementById('endGameBtn').style.display = 'none';
-            document.querySelector('.helper-group').style.display = 'none';
+            document.getElementById('hintBtnFixed').style.display = 'none';
+            document.getElementById('resetGridBtn').style.display = 'none';
             
             const modal = document.getElementById('gameOverModal');
             const modalTitle = document.getElementById('modalTitle');
