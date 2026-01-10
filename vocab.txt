@@ -20,6 +20,113 @@ door
 Stand up
 Sit down
 
+[Unit 2]
+eyes
+ears
+arms
+legs
+mouth
+nose
+head 
+
+[Unit 3]
+mum
+dad
+sister
+brother
+grandpa
+grandma
+hen
+dog
+duck
+cat
+baby
+kitten
+puppy
+chick
+duckling
+
+[Unit 4]
+parrot
+lion
+fish
+zebra
+monkey
+frog
+tree
+pond
+big
+small
+
+[Unit 5]
+milk
+oranges
+cakes
+tomatoes
+chocolate
+pears
+potatoes
+carrots
+bananas
+ground
+fruit
+vegetables
+grow
+come from
+
+[Unit 6]
+bus stop
+school
+cinema
+hospital
+toy shop
+park
+café
+playground
+sports centre
+map
+
+[Unit 7]
+teacher
+fire fighter
+gardener
+police officer
+vet
+doctor
+farmer
+shop assistant
+dentist
+inside
+outside
+
+[Unit 8]
+hat
+coat
+scarf
+boots
+sweater
+gloves
+jeans
+T-shirt
+soft
+hard
+belt
+sunglasses
+
+[Unit 9]
+play football
+run
+paint a picture
+swim
+read
+dance
+my turn
+sorry
+guess
+slowly
+quickly
+hobby
+
 === Super Minds 1 ===
 [Unit 0]
 yellow
@@ -65,6 +172,96 @@ short
 ugly
 beautiful
 
+[Unit 3]
+donkey
+elephant
+spider
+cat
+rat
+frog
+duck
+lizard
+dog
+in
+on
+under
+
+[Unit 4]
+apple
+banana
+cake
+pizza
+sausage
+cheese sandwich
+fish
+chicken
+peas
+steak
+carrots
+lunch
+fridge
+fruit
+vegetables
+plant
+soil
+
+[Unit 5]
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday
+go fishing
+play football
+watch TV
+play games
+
+[Unit 6]
+bedroom
+bathroom
+living room
+kitchen
+hall
+stairs
+cellar
+dining room
+
+[Unit 7]
+sweater
+skirt
+shorts
+trousers
+jacket
+socks
+jeans
+shoes
+baseball cap
+T-shirt
+
+[Unit 8]
+arm
+hand
+knee
+fingers
+leg
+foot
+feet
+toes
+head
+
+[Unit 9]
+paint a picture
+listen to music
+catch a fish
+take a photo
+eat ice cream
+play the guitar
+read a book
+make a sandcastle
+look for shells
+
 === Super Minds 2 ===
 [Unit 0]
 bookcase 
@@ -77,11 +274,9 @@ window
 chair 
 crayon 
 floor
-
 burglar 
 drop 
 quick
-check out
 Great work 
 Well done
 
@@ -97,12 +292,6 @@ have dinner
 go to bed
 yawn
 keys
-bedtime
-bad day
-firefighter
-
-sun
-shadow
 
 [Unit 2]
 polar bear
@@ -114,18 +303,126 @@ tiger
 parrot
 monkey
 snake
-
-zoo keeper
 throw
 hungry
 peel
 
-habitat
-grassland
-ocean
-polar habitat
-rainforest
 
+[Unit 3]
+train station
+hospital
+cinema
+playground
+café
+shop
+street
+bus stop
+park
+school
+swimming pool
+town
+between
+behind
+in front of
+next to
+
+[Unit 4]
+tomatoes
+beans
+greens
+potatoes
+kiwis
+lemons
+bread
+mangos
+grapes
+eggs
+watermelons
+
+[Unit 5]
+poster
+wardrobe
+mirror
+armchair
+lamp
+bed
+table
+sofa
+rug
+tidy up
+messy
+lovely
+comfortable
+seat
+
+[Unit 6]
+eyes
+face
+glasses
+hair
+cheeks
+ears
+nose
+tears
+chin
+mouth
+sad
+excited
+scared
+tired
+angry
+happy
+blonde
+curly
+
+[Unit 7]
+helicopter
+ship
+lorry
+boat
+scooter
+skateboard
+motorbike
+taxi
+bus
+sail
+drive
+ride
+fly
+
+[Unit 8]
+badminton
+table tennis
+tennis
+basketball
+baseball
+volleyball
+swimming
+football
+hockey
+athletics
+sports club
+join
+team
+goal
+boring
+fun
+difficult
+easy
+
+[Unit 9]
+read a comic
+go hiking
+visit cousins
+help in the garden
+take riding lessons
+build a tree house
+keep a scrapbook
+learn to swim
+go camping
+bake a cake
+rest
+have a break
 
 === Expansion ===
 some
@@ -134,6 +431,3 @@ leave
 arrive
 321
 654
-
-
-
