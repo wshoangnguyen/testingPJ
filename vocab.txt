@@ -83,8 +83,17 @@ grassland
 ocean
 polar habitat
 rainforest
+
+=== Starters ===
+123456
+321654
+112233
+445566
+
 === Expansion ===
 some
 work
 leave
 arrive
+321
+654
