@@ -1,8 +1,14 @@
 === Super Minds 0 ===
 [Unit 0]
-hello
-goodbye
-teacher
+blue
+green
+yellow
+orange
+red
+pink
+Hello
+Bye
+Goodbye
 
 [Unit 1]
 book
@@ -84,11 +90,6 @@ ocean
 polar habitat
 rainforest
 
-=== Starters ===
-123456
-321654
-112233
-445566
 
 === Expansion ===
 some
@@ -97,3 +98,4 @@ leave
 arrive
 321
 654
+
