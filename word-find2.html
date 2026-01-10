@@ -1513,7 +1513,7 @@
             selectedCells = [];
             currentWordForSpawn = null;
             lettersToSpawn = [];
-            spawnDelay = 5000;
+            spawnDelay = 8000;
             
             document.getElementById('score').textContent = currentScore;
             document.getElementById('combo').textContent = currentCombo;
@@ -1543,14 +1543,25 @@
             
             initializeGrid();
             
-            setTimeout(() => {
-                smartSpawn(true);
-                setTimeout(() => {
-                    if (!isGameOver) {
-                        smartSpawn(true);
-                    }
-                }, 500);
-            }, 300);
+// Sửa thành (spawn 4 từ thay vì 2 từ):
+setTimeout(() => {
+    // Spawn từ đầu tiên
+    smartSpawn(true);
+    
+    // Spawn 3 từ tiếp theo với độ trễ nhẹ để tránh quá tải
+    const spawnAdditionalWords = () => {
+        if (!isGameOver) {
+            smartSpawn(true);
+        }
+    };
+    
+    // Spawn từ thứ 2 sau 300ms
+    setTimeout(spawnAdditionalWords, 300);
+    // Spawn từ thứ 3 sau 600ms
+    setTimeout(spawnAdditionalWords, 600);
+    // Spawn từ thứ 4 sau 900ms
+    setTimeout(spawnAdditionalWords, 900);
+}, 300);
             
             startLetterSpawning();
             
