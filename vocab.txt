@@ -21,8 +21,24 @@ computer
 
 === Super Minds 2 ===
 [Unit 0]
-test1
-test2
+bookcase 
+wall 
+board 
+clock 
+door 
+cupboard 
+window 
+chair 
+crayon 
+floor
+
+burglar 
+drop 
+quick
+check out
+
+Great work 
+Well done
 
 [Unit 1]
 2test
@@ -33,3 +49,4 @@ test2
 some
 extra
 word
+
