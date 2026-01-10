@@ -11,9 +11,14 @@ Bye
 Goodbye
 
 [Unit 1]
+window
+chair
 book
 pencil
-classroom
+table
+door
+Stand up
+Sit down
 
 === Super Minds 1 ===
 [Unit 0]
@@ -98,4 +103,5 @@ leave
 arrive
 321
 654
+
 
