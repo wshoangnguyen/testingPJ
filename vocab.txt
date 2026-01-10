@@ -22,17 +22,48 @@ Sit down
 
 === Super Minds 1 ===
 [Unit 0]
-family
-house
-school
+yellow
+red
+orange
+purple
+green
+blue 
+bag
+balloon
+cat
+power
 
 [Unit 1]
+ruler
+pen
+book
+rubber
+pencil case
+pencil
 desk
-computer
+notebook
+bag
+paper
 
 [Unit 2]
-axx
-xaaa
+computer game
+kite
+plane
+bike
+doll
+monster
+train
+go-kart
+car
+ball 
+big
+small
+old
+new
+long
+short
+ugly
+beautiful
 
 === Super Minds 2 ===
 [Unit 0]
@@ -103,5 +134,6 @@ leave
 arrive
 321
 654
+
 
 
