@@ -788,6 +788,177 @@ holiday | kỳ nghỉ
 nature | thiên nhiên
 explore | khám phá
 
+=== Super Minds 5 ===
+[Unit 0]
+bubbles | bong bóng
+explosion | vụ nổ
+instructions | hướng dẫn
+liquid | chất lỏng
+goggles | kính bảo hộ
+apron | tạp dề
+powder | bột
+gloves | găng tay
+test tube | ống nghiệm
+shelf | cái kệ
+science | khoa học
+laboratory | phòng thí nghiệm
+experiment | thí nghiệm
+safety | sự an toàn
+measure | đo lường
+
+[Unit 1]
+volcano | núi lửa
+earthquake | động đất
+flood | lũ lụt
+hurricane | bão lớn / cuồng phong
+tsunami | sóng thần
+forest fire | cháy rừng
+smoke | khói
+temple | ngôi đền
+statue | bức tượng
+fountain | đài phun nước
+magma | mắc-ma (đá nóng chảy trong lòng đất)
+lava | dung nham
+ash | tro bụi
+destroy | phá hủy
+erupt | phun trào
+
+[Unit 2]
+rainforest | rừng mưa nhiệt đới
+beak | cái mỏ (chim)
+toucan | chim toucan (chim mỏ to)
+sloth | con lười
+branch | cành cây
+anaconda | trăn anaconda
+jaguar | báo đốm
+anteater | thú ăn kiến
+beetle | bọ cánh cứng
+ecosystem | hệ sinh thái
+oxygen | khí ô-xy
+species | giống loài
+carbon dioxide | khí các-bô-níc (CO2)
+Amazon | rừng A-ma-dôn
+monkey | con khỉ
+
+[Unit 3]
+spotlight | đèn sân khấu / tiêu điểm
+electric guitar | đàn ghi-ta điện
+fans | người hâm mộ
+dancer | vũ công
+bass guitar | đàn ghi-ta bass
+drum kit | bộ trống
+stage | sân khấu
+backing singers | nhóm hát bè
+bodyguards | vệ sĩ
+album | an-bum nhạc
+record | bản thu âm / đĩa hát
+jukebox | máy phát nhạc tự động
+genre | thể loại
+jazz | nhạc jazz
+concert | buổi hòa nhạc
+
+[Unit 4]
+waiter | bồi bàn (nam)
+strawberries | dâu tây
+biscuits | bánh quy
+spoon | cái thìa
+fork | cái nĩa
+knife | con dao
+chopsticks | đôi đũa
+pepper | hạt tiêu
+salt | muối
+recipe | công thức nấu ăn
+ingredients | nguyên liệu
+chocolate | sô-cô-la
+cacao | ca cao
+melt | tan chảy
+restaurant | nhà hàng
+
+[Unit 5]
+robbers | những tên cướp
+jail | nhà tù
+wagon | xe ngựa kéo
+sheriff | cảnh sát trưởng
+saddle | yên ngựa
+pistol | súng lục
+handcuffs | còng số 8
+rope | dây thừng
+barrel | cái thùng
+Native American | người bản địa Mỹ (da đỏ)
+bison | bò rừng
+tribe | bộ lạc
+gold rush | cơn sốt vàng
+cowboy | cao bồi
+arrest | bắt giữ
+
+[Unit 6]
+flag | lá cờ
+carpet | tấm thảm
+sunglasses | kính râm
+cushion | gối tựa / đệm
+earrings | bông tai
+souvenir | quà lưu niệm
+tourist | khách du lịch
+mosque | nhà thờ Hồi giáo
+mosaic | tranh khảm
+tiles | gạch men / ngói
+Istanbul | thành phố I-x-tan-bun
+Turkey | nước Thổ Nhĩ Kỳ
+basket | cái giỏ
+market | chợ
+travel | du lịch
+
+[Unit 7]
+mask | mặt nạ
+wig | tóc giả
+actor | diễn viên
+costume | trang phục diễn
+audience | khán giả
+theatre | nhà hát
+play | vở kịch
+Shakespeare | Sếch-xpia (nhà viết kịch)
+tragedy | bi kịch
+comedy | hài kịch
+prop | đạo cụ
+applause | tràng pháo tay
+stage | sân khấu
+perform | biểu diễn
+character | nhân vật
+
+[Unit 8]
+farmer | nông dân
+engineer | kỹ sư
+dentist | nha sĩ
+artist | họa sĩ / nghệ sĩ
+designer | nhà thiết kế
+computer programmer | lập trình viên máy tính
+mechanic | thợ cơ khí
+businesswoman | nữ doanh nhân
+businessman | nam doanh nhân
+cleaner | nhân viên vệ sinh
+future | tương lai
+career | sự nghiệp
+job | công việc
+profession | nghề nghiệp chuyên môn
+skills | kỹ năng
+
+[Unit 9]
+sail | cánh buồm
+sailor | thủy thủ
+captain | thuyền trưởng
+mast | cột buồm
+lifeboat | thuyền cứu sinh
+cabin | khoang tàu / ca-bin
+porthole | cửa sổ tàu thủy (tròn)
+ocean | đại dương
+sea | biển
+ship | tàu thủy
+voyage | chuyến hải trình
+mystery | bí ẩn
+adventure | cuộc phiêu lưu
+navigation | sự định vị / nghề hàng hải
+compass | la bàn
+
 === Expansion ===
 some | một vài
 work | làm việc
@@ -986,7 +1157,6 @@ so | vì vậy / quá
 no | không
 yes | có
 ok | được
-oh | ồ
 hi | xin chào
 bye | tạm biệt
 now | bây giờ
