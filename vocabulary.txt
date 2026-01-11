@@ -1,24 +1,1012 @@
 === Super Minds 0 ===
 [Unit 0]
-hello | A friendly greeting
-goodbye | Saying when leaving
-teacher | Person who teaches
+blue | màu xanh dương
+green | màu xanh lá
+yellow | màu vàng
+orange | màu cam
+red | màu đỏ
+pink | màu hồng
+Hello | Xin chào
+Bye | Tạm biệt
+Goodbye | Tạm biệt
 
 [Unit 1]
-book | You read this
-pencil | You write with this
-classroom | Where you learn
+window | cửa sổ
+chair | cái ghế
+book | quyển sách
+pencil | bút chì
+table | cái bàn
+door | cửa ra vào
+Stand up | Đứng lên
+Sit down | Ngồi xuống
+
+[Unit 2]
+eyes | đôi mắt
+ears | đôi tai
+arms | cánh tay
+legs | chân
+mouth | miệng
+nose | mũi
+head | đầu
+
+[Unit 3]
+mum | mẹ
+dad | bố
+sister | chị/em gái
+brother | anh/em trai
+grandpa | ông
+grandma | bà
+hen | gà mái
+dog | con chó
+duck | con vịt
+cat | con mèo
+baby | em bé
+kitten | mèo con
+puppy | chó con
+chick | gà con
+duckling | vịt con
+
+[Unit 4]
+parrot | con vẹt
+lion | sư tử
+fish | con cá
+zebra | ngựa vằn
+monkey | con khỉ
+frog | con ếch
+tree | cái cây
+pond | cái ao
+big | to
+small | nhỏ
+
+[Unit 5]
+milk | sữa
+oranges | những quả cam
+cakes | những cái bánh ngọt
+tomatoes | những quả cà chua
+chocolate | sô-cô-la
+pears | những quả lê
+potatoes | những củ khoai tây
+carrots | những củ cà rốt
+bananas | những quả chuối
+ground | mặt đất
+fruit | trái cây
+vegetables | rau củ
+grow | trồng / mọc
+come from | đến từ
+
+[Unit 6]
+bus stop | trạm xe buýt
+school | trường học
+cinema | rạp chiếu phim
+hospital | bệnh viện
+toy shop | cửa hàng đồ chơi
+park | công viên
+café | quán cà phê
+playground | sân chơi
+sports centre | trung tâm thể thao
+map | bản đồ
+
+[Unit 7]
+teacher | giáo viên
+fire fighter | lính cứu hỏa
+gardener | người làm vườn
+police officer | cảnh sát
+vet | bác sĩ thú y
+doctor | bác sĩ
+farmer | nông dân
+shop assistant | nhân viên bán hàng
+dentist | nha sĩ
+inside | bên trong
+outside | bên ngoài
+
+[Unit 8]
+hat | cái mũ
+coat | áo khoác
+scarf | khăn quàng cổ
+boots | đôi ủng
+sweater | áo len
+gloves | đôi găng tay
+jeans | quần bò
+T-shirt | áo phông
+soft | mềm
+hard | cứng
+belt | thắt lưng
+sunglasses | kính râm
+
+[Unit 9]
+play football | chơi bóng đá
+run | chạy
+paint a picture | vẽ tranh
+swim | bơi
+read | đọc
+dance | nhảy múa
+my turn | đến lượt tôi
+sorry | xin lỗi
+guess | đoán
+slowly | một cách chậm rãi
+quickly | một cách nhanh nhẹn
+hobby | sở thích
 
 === Super Minds 1 ===
 [Unit 0]
-family | Mother, father, brothers, sisters
-house | Place where you live
-school | Place of learning
+yellow | màu vàng
+red | màu đỏ
+orange | màu cam
+purple | màu tím
+green | màu xanh lá
+blue | màu xanh dương
+bag | cái cặp / túi
+balloon | bóng bay
+cat | con mèo
+power | sức mạnh / năng lượng
 
 [Unit 1]
-desk | You sit at this
-computer | Electronic device for learning
+ruler | thước kẻ
+pen | bút mực
+book | quyển sách
+rubber | cục tẩy
+pencil case | hộp bút
+pencil | bút chì
+desk | bàn học
+notebook | vở ghi chép
+bag | cái cặp
+paper | giấy
 
 [Unit 2]
-ax | ax
-axxx | axxx
+computer game | trò chơi máy tính
+kite | cái diều
+plane | máy bay
+bike | xe đạp
+doll | búp bê
+monster | quái vật
+train | tàu hỏa
+go-kart | xe đua nhỏ
+car | ô tô
+ball | quả bóng
+big | to
+small | nhỏ
+old | cũ / già
+new | mới
+long | dài
+short | ngắn / thấp
+ugly | xấu xí
+beautiful | xinh đẹp
+
+[Unit 3]
+donkey | con lừa
+elephant | con voi
+spider | con nhện
+cat | con mèo
+rat | con chuột cống
+frog | con ếch
+duck | con vịt
+lizard | thằn lằn
+dog | con chó
+in | ở trong
+on | ở trên
+under | ở dưới
+
+[Unit 4]
+apple | quả táo
+banana | quả chuối
+cake | bánh ngọt
+pizza | bánh pizza
+sausage | xúc xích
+cheese sandwich | bánh mì kẹp phô mai
+fish | cá
+chicken | thịt gà
+peas | đậu hà lan
+steak | bít tết
+carrots | cà rốt
+lunch | bữa trưa
+fridge | tủ lạnh
+fruit | trái cây
+vegetables | rau củ
+plant | thực vật / cây
+soil | đất trồng
+
+[Unit 5]
+Monday | Thứ hai
+Tuesday | Thứ ba
+Wednesday | Thứ tư
+Thursday | Thứ năm
+Friday | Thứ sáu
+Saturday | Thứ bảy
+Sunday | Chủ nhật
+go fishing | đi câu cá
+play football | chơi bóng đá
+watch TV | xem tivi
+play games | chơi trò chơi
+
+[Unit 6]
+bedroom | phòng ngủ
+bathroom | phòng tắm
+living room | phòng khách
+kitchen | nhà bếp
+hall | hành lang / sảnh
+stairs | cầu thang
+cellar | hầm chứa
+dining room | phòng ăn
+
+[Unit 7]
+sweater | áo len
+skirt | váy ngắn
+shorts | quần đùi
+trousers | quần dài
+jacket | áo khoác
+socks | tất / vớ
+jeans | quần bò
+shoes | giày
+baseball cap | mũ lưỡi trai
+T-shirt | áo phông
+
+[Unit 8]
+arm | cánh tay
+hand | bàn tay
+knee | đầu gối
+fingers | ngón tay
+leg | chân
+foot | bàn chân (số ít)
+feet | bàn chân (số nhiều)
+toes | ngón chân
+head | đầu
+
+[Unit 9]
+paint a picture | vẽ một bức tranh
+listen to music | nghe nhạc
+catch a fish | bắt cá
+take a photo | chụp ảnh
+eat ice cream | ăn kem
+play the guitar | chơi đàn ghi-ta
+read a book | đọc sách
+make a sandcastle | xây lâu đài cát
+look for shells | tìm vỏ sò
+
+=== Super Minds 2 ===
+[Unit 0]
+bookcase | tủ sách
+wall | bức tường
+board | cái bảng
+clock | đồng hồ treo tường
+door | cửa ra vào
+cupboard | tủ đựng đồ
+window | cửa sổ
+chair | cái ghế
+crayon | bút sáp màu
+floor | sàn nhà
+burglar | kẻ trộm
+drop | làm rơi
+quick | nhanh lên
+check out | kiểm tra / xem thử
+Great work | Làm tốt lắm
+Well done | Giỏi lắm
+
+[Unit 1]
+get up | thức dậy
+get dressed | mặc quần áo
+have breakfast | ăn sáng
+brush your teeth | đánh răng
+go to school | đi học
+have lunch | ăn trưa
+play in the park | chơi trong công viên
+have dinner | ăn tối
+go to bed | đi ngủ
+yawn | ngáp
+keys | chìa khóa
+bedtime | giờ đi ngủ
+bad day | ngày tồi tệ
+firefighter | lính cứu hỏa
+sun | mặt trời
+shadow | cái bóng
+
+[Unit 2]
+polar bear | gấu bắc cực
+bear | con gấu
+zebra | ngựa vằn
+crocodile | cá sấu
+hippo | hà mã
+tiger | con hổ
+parrot | con vẹt
+monkey | con khỉ
+snake | con rắn
+zoo keeper | người trông sở thú
+throw | ném
+hungry | đói bụng
+peel | bóc vỏ
+habitat | môi trường sống
+grassland | đồng cỏ
+ocean | đại dương
+polar habitat | môi trường vùng cực
+rainforest | rừng nhiệt đới
+
+[Unit 3]
+train station | ga tàu hỏa
+hospital | bệnh viện
+cinema | rạp chiếu phim
+playground | sân chơi
+café | quán cà phê
+shop | cửa hàng
+street | đường phố
+bus stop | trạm xe buýt
+park | công viên
+school | trường học
+swimming pool | hồ bơi
+town | thị trấn
+between | ở giữa
+behind | ở phía sau
+in front of | ở phía trước
+next to | bên cạnh
+
+[Unit 4]
+tomatoes | cà chua
+beans | hạt đậu
+greens | rau xanh
+potatoes | khoai tây
+kiwis | quả ki-wi
+lemons | quả chanh vàng
+bread | bánh mì
+mangos | quả xoài
+grapes | quả nho
+eggs | trứng
+watermelons | dưa hấu
+
+[Unit 5]
+poster | áp phích
+wardrobe | tủ quần áo
+mirror | cái gương
+armchair | ghế bành
+lamp | đèn ngủ
+bed | cái giường
+table | cái bàn
+sofa | ghế sô-pha
+rug | tấm thảm nhỏ
+tidy up | dọn dẹp
+messy | bừa bộn
+lovely | đáng yêu
+comfortable | thoải mái
+seat | chỗ ngồi
+
+[Unit 6]
+eyes | đôi mắt
+face | khuôn mặt
+glasses | mắt kính
+hair | tóc
+cheeks | má
+ears | tai
+nose | mũi
+tears | nước mắt
+chin | cằm
+mouth | miệng
+sad | buồn
+excited | hào hứng
+scared | sợ hãi
+tired | mệt mỏi
+angry | tức giận
+happy | vui vẻ
+blond | vàng hoe (tóc nam)
+blonde | vàng hoe (tóc nữ)
+curly | xoăn
+
+[Unit 7]
+helicopter | trực thăng
+ship | tàu thủy lớn
+lorry | xe tải
+boat | thuyền
+scooter | xe tay ga / xe trượt
+skateboard | ván trượt
+motorbike | xe máy
+taxi | xe tắc-xi
+bus | xe buýt
+sail | đi thuyền buồm
+drive | lái xe (ô tô)
+ride | lái xe (2 bánh) / cưỡi
+fly | bay
+
+[Unit 8]
+badminton | cầu lông
+table tennis | bóng bàn
+tennis | quần vợt
+basketball | bóng rổ
+baseball | bóng chày
+volleyball | bóng chuyền
+swimming | bơi lội
+football | bóng đá
+hockey | khúc côn cầu
+athletics | điền kinh
+sports club | câu lạc bộ thể thao
+join | tham gia
+team | đội
+goal | bàn thắng / khung thành
+boring | nhàm chán
+fun | vui vẻ
+difficult | khó khăn
+easy | dễ dàng
+
+[Unit 9]
+read a comic | đọc truyện tranh
+go hiking | đi bộ đường dài
+visit cousins | thăm anh chị em họ
+help in the garden | giúp làm vườn
+take riding lessons | học cưỡi ngựa
+build a tree house | xây nhà trên cây
+keep a scrapbook | làm sổ lưu niệm
+learn to swim | học bơi
+go camping | đi cắm trại
+bake a cake | nướng bánh
+rest | nghỉ ngơi
+have a break | nghỉ giải lao
+
+=== Super Minds 3 ===
+[Unit 0]
+upstairs | tầng trên
+downstairs | tầng dưới
+cellar | hầm chứa
+explorer | nhà thám hiểm
+meet | gặp gỡ
+lost treasure | kho báu thất lạc
+museum | bảo tàng
+adventure | cuộc phiêu lưu
+castle | lâu đài
+secret | bí mật
+only | duy nhất / chỉ
+
+[Unit 1]
+Art | Mỹ thuật
+English | Tiếng Anh
+Geography | Địa lý
+Music | Âm nhạc
+I.T. | Tin học
+History | Lịch sử
+Maths | Toán
+Science | Khoa học
+P.E. | Thể dục
+in code | bằng mật mã
+easy | dễ
+keep | giữ
+dark | tối tăm
+probably | có lẽ
+No way | Không đời nào
+yet | chưa
+follow | đi theo
+
+[Unit 2]
+apple juice | nước ép táo
+cheese | phô mai
+lemonade | nước chanh
+salad | sa-lát
+rolls | bánh mì cuộn
+soup | súp / canh
+vegetables | rau củ
+water | nước
+ill | ốm / bệnh
+bite | cắn
+bit | đã cắn (quá khứ)
+medicine | thuốc
+hut | túp lều
+top | đỉnh
+waterfall | thác nước
+golden | bằng vàng
+get better | hồi phục / khỏe hơn
+fool | kẻ ngốc
+Just you wait | Hãy đợi đấy
+
+[Unit 3]
+wash up | rửa bát đĩa
+tidy up | dọn dẹp
+sweep | quét dọn
+cook | nấu ăn
+feed the dog | cho chó ăn
+dry the dishes | lau khô bát đĩa
+do the shopping | đi mua sắm
+take the dog for a walk | dắt chó đi dạo
+tea | trà
+moon | mặt trăng
+at night | vào ban đêm
+pilot | phi công
+flight | chuyến bay
+spaceship | tàu vũ trụ
+
+[Unit 4]
+map | bản đồ
+bank | ngân hàng
+bus station | bến xe buýt
+tower | tháp
+library | thư viện
+market square | quảng trường chợ
+sports centre | trung tâm thể thao
+supermarket | siêu thị
+funfair | hội chợ vui chơi
+car park | bãi đỗ xe
+higher than | cao hơn
+Pirate Ship | Tàu cướp biển
+the wrong place | nhầm chỗ
+
+[Unit 5]
+seahorse | cá ngựa
+dolphin | cá heo
+seal | hải cẩu
+shell | vỏ sò
+octopus | bạch tuộc
+anchor | mỏ neo
+starfish | sao biển
+turtle | rùa biển
+trap | cái bẫy
+chase | đuổi theo
+giant | khổng lồ
+have a look | nhìn xem
+get my arm out | rút tay ra
+stuck | bị kẹt
+my beauty | người đẹp của ta
+stupid | ngu ngốc
+cage | cái lồng
+helpful | hay giúp đỡ
+fourth | thứ tư (số thứ tự)
+
+[Unit 6]
+games console | máy chơi game
+electric fan | quạt điện
+walkie-talkie | bộ đàm
+electric toothbrush | bàn chải điện
+tablet | máy tính bảng
+torch | đèn pin
+mobile phone | điện thoại di động
+lift | thang máy
+laptop | máy tính xách tay
+fabulous | tuyệt vời
+fan | cái quạt / người hâm mộ
+van | xe tải nhỏ
+
+[Unit 7]
+doctor | bác sĩ
+nurse | y tá
+cold | cảm lạnh
+cough | ho
+headache | đau đầu
+toothache | đau răng
+earache | đau tai
+stomach-ache | đau dạ dày
+quietly | một cách yên lặng
+woke up | đã thức dậy
+felt | đã cảm thấy
+had | đã có
+went | đã đi
+gave | đã đưa cho
+said | đã nói
+terrible | khủng khiếp
+
+[Unit 8]
+Mexico | nước Mê-hi-cô
+Spain | nước Tây Ban Nha
+Argentina | nước Ác-hen-ti-na
+Egypt | nước Ai Cập
+Chile | nước Chi-lê
+China | nước Trung Quốc
+Turkey | nước Thổ Nhĩ Kỳ
+Brazil | nước Bra-xin
+Australia | nước Úc
+India | nước Ấn Độ
+North America | Bắc Mỹ
+South America | Nam Mỹ
+Europe | Châu Âu
+Asia | Châu Á
+Africa | Châu Phi
+canyon | hẻm núi
+harbour | bến cảng
+volcano | núi lửa
+
+[Unit 9]
+thunderstorm | bão sấm sét
+lightning | tia chớp
+rain | mưa
+rainy | có mưa
+wind | gió
+windy | có gió
+cloud | mây
+cloudy | có mây
+fog | sương mù
+foggy | có sương mù
+umbrella | cái ô
+raincoat | áo mưa
+boots | đôi ủng
+because of | bởi vì
+so much | rất nhiều
+seaside | bờ biển
+steam train | tàu hơi nước
+crowded | đông đúc
+basket | cái giỏ
+cart | xe đẩy / xe kéo
+wore | đã mặc
+
+=== Super Minds 4 ===
+[Unit 0]
+big wheel | vòng quay khổng lồ
+rollercoaster | tàu lượn siêu tốc
+roundabout | vòng quay ngựa gỗ / bùng binh
+mayor | thị trưởng
+dodgem cars | xe điện đụng
+microphone | mi-crô
+band | ban nhạc
+photographer | nhiếp ảnh gia
+journalist | nhà báo
+well done | làm tốt lắm
+try out | thử nghiệm
+excitement | sự phấn khích
+explore | khám phá
+treasure | kho báu
+museum | bảo tàng
+
+[Unit 1]
+queen | nữ hoàng
+knight | hiệp sĩ
+crown | vương miện
+helmet | mũ bảo hiểm / mũ giáp
+necklace | vòng cổ
+bracelet | vòng tay
+shield | cái khiên
+sword | thanh kiếm
+map | bản đồ
+dinosaur | khủng long
+touch | chạm vào
+brilliant | xuất sắc / rực rỡ
+hide | trốn / giấu
+storyteller | người kể chuyện
+timeline | dòng thời gian
+
+[Unit 2]
+mountain | ngọn núi
+forest | khu rừng
+village | ngôi làng
+lake | hồ nước
+island | hòn đảo
+field | cánh đồng
+river | dòng sông
+path | con đường nhỏ
+picnic | dã ngoại
+scare | làm sợ hãi
+rescue | giải cứu
+continent | lục địa
+satellite | vệ tinh
+country | đất nước
+world | thế giới
+
+[Unit 3]
+fire | ngọn lửa / hỏa hoạn
+flood | lũ lụt
+emergency services | dịch vụ khẩn cấp
+police car | xe cảnh sát
+fire engine | xe cứu hỏa
+ambulance | xe cứu thương
+paramedic | nhân viên y tế
+accident | tai nạn
+hurt | bị thương / làm đau
+shark | cá mập
+extinguisher | bình cứu hỏa
+operator | tổng đài viên
+tsunami | sóng thần
+danger | sự nguy hiểm
+rescue | giải cứu
+
+[Unit 4]
+station | nhà ga
+platform | sân ga
+escalator | thang cuốn
+ticket office | phòng bán vé
+train driver | người lái tàu
+suitcase | va li
+train track | đường ray
+return ticket | vé khứ hồi
+single ticket | vé một chiều
+tunnel | đường hầm
+disappear | biến mất
+conductor | người soát vé / nhạc trưởng
+imagination | trí tưởng tượng
+eco-friendly | thân thiện với môi trường
+pollute | gây ô nhiễm
+
+[Unit 5]
+dark | sẫm màu / tối
+blonde | vàng hoe
+fair | sáng màu / trắng trẻo
+moustache | ria mép
+curly | xoăn
+beard | râu quai nón
+scar | vết sẹo
+straight | thẳng
+criminal | tội phạm
+mysterious | bí ẩn
+uniform | đồng phục
+walkie-talkie | bộ đàm
+rob | cướp
+sketch | bản phác thảo
+police | cảnh sát
+
+[Unit 6]
+tail | cái đuôi
+horn | cái sừng
+scales | vảy (cá/rồng)
+wing | đôi cánh
+feathers | lông vũ
+tongue | cái lưỡi
+mythical beast | quái thú huyền thoại
+dinosaur | khủng long
+mermaid | nàng tiên cá
+unicorn | kỳ lân
+centaur | nhân mã
+treasure chest | rương kho báu
+omnivore | động vật ăn tạp
+herbivore | động vật ăn cỏ
+carnivore | động vật ăn thịt
+
+[Unit 7]
+tambourine | trống lục lạc
+triangle | kẻng tam giác
+trumpet | kèn trôm-pét
+trombone | kèn trôm-bôn
+drums | trống
+harp | đàn hạc
+saxophone | kèn xắc-xô
+violin | đàn vĩ cầm
+orchestra | dàn nhạc
+instrument | nhạc cụ
+concert | buổi hòa nhạc
+conductor | nhạc trưởng
+percussion | bộ gõ
+string | bộ dây
+wind | bộ hơi (nhạc cụ)
+
+[Unit 8]
+planet | hành tinh
+rocket | tên lửa
+UFO | vật thể bay không xác định
+star | ngôi sao
+comet | sao chổi
+telescope | kính thiên văn
+astronaut | phi hành gia
+moon | mặt trăng
+space station | trạm vũ trụ
+planetarium | cung thiên văn
+outer space | ngoài vũ trụ
+asteroid | tiểu hành tinh
+orbit | quỹ đạo
+spacesuit | bộ đồ phi hành gia
+universe | vũ trụ
+
+[Unit 9]
+sail a boat | lái thuyền buồm
+swing on a rope | đu dây
+dive into the water | lặn xuống nước
+row a boat | chèo thuyền
+put up a tent | dựng lều
+make a fire | đốt lửa
+collect wood | nhặt củi
+sleeping bag | túi ngủ
+tent | cái lều
+campfire | lửa trại
+campsite | khu cắm trại
+adventure | cuộc phiêu lưu
+holiday | kỳ nghỉ
+nature | thiên nhiên
+explore | khám phá
+
+=== Expansion ===
+some | một vài
+work | làm việc
+leave | rời đi
+arrive | đến nơi
+he | anh ấy
+she | cô ấy
+it | nó
+I | tôi
+you | bạn
+we | chúng tôi
+they | họ
+him | anh ấy (tân ngữ)
+her | cô ấy (tân ngữ)
+me | tôi (tân ngữ)
+my | của tôi
+your | của bạn
+his | của anh ấy
+its | của nó
+us | chúng tôi (tân ngữ)
+them | họ (tân ngữ)
+their | của họ
+our | của chúng tôi
+a | một
+an | một
+the | cái / người (xác định)
+and | và
+but | nhưng
+or | hoặc
+for | cho / vì
+on | ở trên / vào lúc
+in | ở trong
+at | tại
+to | tới / để
+of | của
+by | bởi / bằng
+with | với
+from | từ
+as | như là
+is | là (số ít)
+are | là (số nhiều)
+was | đã là (số ít)
+were | đã là (số nhiều)
+be | thì / là / ở
+been | đã từng (phân từ 2)
+have | có (số nhiều)
+has | có (số ít)
+had | đã có
+do | làm (số nhiều)
+does | làm (số ít)
+did | đã làm
+can | có thể
+could | có thể (quá khứ)
+will | sẽ
+would | sẽ (quá khứ)
+should | nên
+may | có lẽ / có thể
+might | có lẽ / có thể
+must | phải
+day | ngày
+night | đêm
+time | thời gian
+year | năm
+month | tháng
+week | tuần
+hour | giờ
+minute | phút
+second | giây
+home | nhà / tổ ấm
+house | ngôi nhà
+room | căn phòng
+city | thành phố
+place | địa điểm
+thing | sự vật
+person | người (số ít)
+people | người (số nhiều)
+child | đứa trẻ
+children | những đứa trẻ
+man | đàn ông
+men | những người đàn ông
+woman | phụ nữ
+women | những người phụ nữ
+family | gia đình
+friend | bạn bè
+go | đi
+come | đến
+see | nhìn thấy
+look | nhìn
+watch | xem / theo dõi
+read | đọc
+write | viết
+draw | vẽ (bằng bút chì/mực)
+paint | vẽ (bằng màu)
+sing | hát
+dance | nhảy
+play | chơi
+run | chạy
+walk | đi bộ
+jump | nhảy
+swim | bơi
+eat | ăn
+drink | uống
+cook | nấu ăn
+make | làm / tạo ra
+take | cầm / lấy
+give | đưa cho
+find | tìm thấy
+think | suy nghĩ
+know | biết
+learn | học
+study | nghiên cứu / học tập
+teach | dạy học
+good | tốt
+bad | xấu / tệ
+happy | hạnh phúc
+sad | buồn
+big | to
+small | nhỏ
+long | dài
+short | ngắn / thấp
+hot | nóng
+cold | lạnh
+new | mới
+old | cũ / già
+young | trẻ
+fast | nhanh
+slow | chậm
+high | cao
+low | thấp
+first | đầu tiên
+last | cuối cùng
+right | đúng / phải
+wrong | sai
+black | màu đen
+white | màu trắng
+brown | màu nâu
+gray | màu xám
+class | lớp học
+lesson | bài học
+test | bài kiểm tra
+exam | kỳ thi
+grade | lớp / điểm số
+mark | điểm số / dấu vết
+score | tỉ số
+board | cái bảng
+desk | bàn học
+teacher | giáo viên
+student | sinh viên
+pupil | học sinh
+school | trường học
+book | sách
+page | trang sách
+line | dòng
+word | từ
+letter | chữ cái / lá thư
+number | con số
+fun | niềm vui
+game | trò chơi
+win | chiến thắng
+lose | thua cuộc
+play | chơi
+score | ghi bàn
+point | điểm
+level | cấp độ
+star | ngôi sao
+prize | giải thưởng
+gold | vàng
+silver | bạc
+bronze | đồng
+medal | huy chương
+cup | cúp
+trophy | cúp chiến thắng
+champion | nhà vô địch
+winner | người chiến thắng
+sun | mặt trời
+moon | mặt trăng
+star | ngôi sao
+sky | bầu trời
+earth | trái đất
+water | nước
+fire | lửa
+air | không khí
+land | đất liền
+tree | cái cây
+flower | bông hoa
+grass | cỏ
+stone | hòn đá
+rock | tảng đá
+sand | cát
+wind | gió
+rain | mưa
+snow | tuyết
+ice | băng đá
+am | là (đi với I)
+so | vì vậy / quá
+no | không
+yes | có
+ok | được
+oh | ồ
+hi | xin chào
+bye | tạm biệt
+now | bây giờ
+then | sau đó
+here | ở đây
+there | ở kia
+how | như thế nào
+why | tại sao
+who | ai
+what | cái gì
+when | khi nào
+where | ở đâu
+one | số 1
+two | số 2
+three | số 3
+four | số 4
+five | số 5
+six | số 6
+seven | số 7
+eight | số 8
+nine | số 9
+ten | số 10
+zero | số 0
