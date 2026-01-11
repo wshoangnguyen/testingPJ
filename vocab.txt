@@ -792,6 +792,177 @@ holiday
 nature
 explore
 
+=== Super Minds 5 ===
+[Unit 0]
+bubbles
+explosion
+instructions
+liquid
+goggles
+apron
+powder
+gloves
+test tube
+shelf
+science
+laboratory
+experiment
+safety
+measure
+
+[Unit 1]
+volcano
+earthquake
+flood
+hurricane
+tsunami
+forest fire
+smoke
+temple
+statue
+fountain
+magma
+lava
+ash
+destroy
+erupt
+
+[Unit 2]
+rainforest
+beak
+toucan
+sloth
+branch
+anaconda
+jaguar
+anteater
+beetle
+ecosystem
+oxygen
+species
+carbon dioxide
+Amazon
+monkey
+
+[Unit 3]
+spotlight
+electric guitar
+fans
+dancer
+bass guitar
+drum kit
+stage
+backing singers
+bodyguards
+album
+record
+jukebox
+genre
+jazz
+concert
+
+[Unit 4]
+waiter
+strawberries
+biscuits
+spoon
+fork
+knife
+chopsticks
+pepper
+salt
+recipe
+ingredients
+chocolate
+cacao
+melt
+restaurant
+
+[Unit 5]
+robbers
+jail
+wagon
+sheriff
+saddle
+pistol
+handcuffs
+rope
+barrel
+Native American
+bison
+tribe
+gold rush
+cowboy
+arrest
+
+[Unit 6]
+flag
+carpet
+sunglasses
+cushion
+earrings
+souvenir
+tourist
+mosque
+mosaic
+tiles
+Istanbul
+Turkey
+basket
+market
+travel
+
+[Unit 7]
+mask
+wig
+actor
+costume
+audience
+theatre
+play
+Shakespeare
+tragedy
+comedy
+prop
+applause
+stage
+perform
+character
+
+[Unit 8]
+farmer
+engineer
+dentist
+artist
+designer
+computer programmer
+mechanic
+businesswoman
+businessman
+cleaner
+future
+career
+job
+profession
+skills
+
+[Unit 9]
+sail
+sailor
+captain
+mast
+lifeboat
+cabin
+porthole
+ocean
+sea
+ship
+voyage
+mystery
+adventure
+navigation
+compass
+
 === Expansion ===
 some
 work
@@ -990,7 +1161,6 @@ so
 no
 yes
 ok
-oh
 hi
 bye
 now
@@ -1014,5 +1184,3 @@ eight
 nine
 ten
 zero
-
-
