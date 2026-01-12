@@ -963,6 +963,177 @@ adventure
 navigation
 compass
 
+=== Super Minds 6 ===
+[Back to School]
+basketball hoop
+bell
+net
+football pitch
+running track
+gym
+tennis court
+bike rack
+railings
+litter bin
+school
+adventure
+time travel
+playground
+sports
+
+[Unit 1]
+palm tree
+hook
+eye-patch
+binoculars
+key
+hammock
+coins
+spade
+treasure chest
+hole
+pirate
+anchor
+bury
+rob
+steal
+
+[Unit 2]
+hang-glider
+parachute
+monorail
+solar panel
+microlight
+wind turbine
+cable car
+jet pack
+surfboard
+inline skates
+unicycle
+future
+transport
+pollute
+driverless
+
+[Unit 3]
+Sphinx
+pharaoh
+pyramid
+chariot
+hieroglyphics
+mummy
+tomb
+Egypt
+slaves
+archaeologist
+mystery
+UFO
+restore
+civilisation
+BC
+
+[Unit 4]
+Olympics
+long jump
+hurdles
+high jump
+boxing
+archery
+wrestling
+weightlifting
+rowing
+gymnastics
+fencing
+athlete
+compete
+stadium
+medal
+
+[Unit 5]
+carpenter's
+jeweller's
+butcher's
+grocer's
+baker's
+barber's
+tailor's
+chemist's
+London
+shop
+stunt
+rescue
+square
+pop
+market
+
+[Unit 6]
+screwdriver
+hammer
+drill
+saw
+lever
+spanner
+paintbrush
+button
+switch
+nails
+inventor
+invent
+invention
+tool
+machine
+
+[Unit 7]
+countdown clock
+lunar module
+space capsule
+spacesuit
+launch pad
+crater
+control panel
+headset
+screen
+moon
+astronaut
+mission
+space
+NASA
+Houston
+
+[Unit 8]
+Northern Lights
+iceberg
+polar bear
+ice floe
+seal
+igloo
+mittens
+sledge
+Arctic
+North Pole
+freezing
+aurora borealis
+cold
+snow
+ice
+
+[Unit 9]
+sunrise
+horizon
+pond
+grassland
+valley
+bush
+stream
+swamp
+dinosaur
+Jurassic
+T-rex
+triceratops
+meadow
+nature
+extinct
+
 === Expansion ===
 some
 work
