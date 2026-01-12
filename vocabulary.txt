@@ -959,6 +959,177 @@ adventure | cuộc phiêu lưu
 navigation | sự định vị / nghề hàng hải
 compass | la bàn
 
+=== Super Minds 6 ===
+[Back to School]
+basketball hoop | rổ bóng rổ
+bell | cái chuông
+net | lưới
+football pitch | sân bóng đá
+running track | đường chạy điền kinh
+gym | phòng tập thể dục / nhà thi đấu
+tennis court | sân quần vợt
+bike rack | giá để xe đạp
+railings | hàng rào chắn / lan can
+litter bin | thùng rác
+school | trường học
+adventure | cuộc phiêu lưu
+time travel | du hành thời gian
+playground | sân chơi
+sports | thể thao
+
+[Unit 1]
+palm tree | cây cọ / cây dừa
+hook | cái móc
+eye-patch | miếng bịt mắt
+binoculars | ống nhòm
+key | chìa khóa
+hammock | cái võng
+coins | tiền xu
+spade | cái xẻng
+treasure chest | rương kho báu
+hole | cái hố
+pirate | cướp biển
+anchor | mỏ neo
+bury | chôn giấu
+rob | cướp
+steal | trộm cắp
+
+[Unit 2]
+hang-glider | diều lượn
+parachute | cái dù
+monorail | tàu đường ray đơn
+solar panel | tấm pin năng lượng mặt trời
+microlight | máy bay siêu nhẹ
+wind turbine | tua bin gió
+cable car | cáp treo
+jet pack | ba lô phản lực
+surfboard | ván lướt sóng
+inline skates | giày trượt pa-tin (bánh dọc)
+unicycle | xe đạp một bánh
+future | tương lai
+transport | giao thông / vận tải
+pollute | gây ô nhiễm
+driverless | không người lái
+
+[Unit 3]
+Sphinx | tượng Nhân sư
+pharaoh | pharaoh / vua Ai Cập cổ
+pyramid | kim tự tháp
+chariot | xe chiến mã
+hieroglyphics | chữ tượng hình
+mummy | xác ướp
+tomb | lăng mộ
+Egypt | Ai Cập
+slaves | nô lệ
+archaeologist | nhà khảo cổ học
+mystery | bí ẩn
+UFO | vật thể bay không xác định
+restore | phục hồi / trùng tu
+civilisation | nền văn minh
+BC | trước Công nguyên
+
+[Unit 4]
+Olympics | Thế vận hội
+long jump | nhảy xa
+hurdles | chạy vượt rào
+high jump | nhảy cao
+boxing | quyền anh
+archery | bắn cung
+wrestling | đấu vật
+weightlifting | cử tạ
+rowing | chèo thuyền
+gymnastics | thể dục dụng cụ
+fencing | đấu kiếm
+athlete | vận động viên
+compete | thi đấu
+stadium | sân vận động
+medal | huy chương
+
+[Unit 5]
+carpenter's | xưởng mộc
+jeweller's | tiệm kim hoàn
+butcher's | cửa hàng thịt
+grocer's | cửa hàng tạp hóa
+baker's | tiệm bánh mì
+barber's | tiệm cắt tóc (nam)
+tailor's | tiệm may
+chemist's | hiệu thuốc
+London | Luân Đôn
+shop | cửa hàng
+stunt | pha mạo hiểm / đóng thế
+rescue | giải cứu
+square | quảng trường
+pop | nhạc pop / tiếng nổ bốp
+market | chợ
+
+[Unit 6]
+screwdriver | tua vít
+hammer | cái búa
+drill | máy khoan
+saw | cái cưa
+lever | đòn bẩy
+spanner | cờ lê
+paintbrush | cọ sơn
+button | cái nút / khuy áo
+switch | công tắc
+nails | cái đinh
+inventor | nhà phát minh
+invent | phát minh
+invention | phát minh / sáng chế
+tool | dụng cụ
+machine | máy móc
+
+[Unit 7]
+countdown clock | đồng hồ đếm ngược
+lunar module | mô-đun mặt trăng (tàu đổ bộ)
+space capsule | khoang tàu vũ trụ
+spacesuit | bộ đồ phi hành gia
+launch pad | bệ phóng
+crater | miệng núi lửa / hố va chạm
+control panel | bảng điều khiển
+headset | tai nghe (kèm mic)
+screen | màn hình
+moon | mặt trăng
+astronaut | phi hành gia
+mission | nhiệm vụ / sứ mệnh
+space | vũ trụ / không gian
+NASA | cơ quan hàng không vũ trụ Mỹ
+Houston | trung tâm điều khiển (thành phố Houston)
+
+[Unit 8]
+Northern Lights | Bắc cực quang
+iceberg | tảng băng trôi
+polar bear | gấu bắc cực
+ice floe | tảng băng nổi
+seal | hải cẩu
+igloo | lều tuyết
+mittens | găng tay hở ngón (găng tay len)
+sledge | xe trượt tuyết
+Arctic | Bắc cực
+North Pole | Cực Bắc
+freezing | đóng băng / lạnh cóng
+aurora borealis | bắc cực quang (tên khoa học)
+cold | lạnh
+snow | tuyết
+ice | băng
+
+[Unit 9]
+sunrise | bình minh
+horizon | đường chân trời
+pond | cái ao
+grassland | đồng cỏ
+valley | thung lũng
+bush | bụi cây
+stream | dòng suối
+swamp | đầm lầy
+dinosaur | khủng long
+Jurassic | kỷ Jura
+T-rex | khủng long bạo chúa
+triceratops | khủng long ba sừng
+meadow | đồng cỏ (thường có hoa)
+nature | thiên nhiên
+extinct | tuyệt chủng
+
 === Expansion ===
 some | một vài
 work | làm việc
