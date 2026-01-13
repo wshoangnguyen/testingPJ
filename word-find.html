@@ -1076,53 +1076,52 @@
             </div>
         </div>
 
-        <div id="gameSection" class="game-section">
-            <div class="game-header">
-                <div class="game-info">
-                    <div class="info-box score-display">
-                        💰 <span id="score">0</span>
-                    </div>
-                    <div id="comboDisplay" class="info-box combo-display" style="display: none;">
-                        🔥 x<span id="combo">1</span>
-                    </div>
-                    <div class="info-box">
-                        ⏱️ <span id="speedLevel">1</span>
-                    </div>
-                    <div class="info-box" style="background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);">
-                        📚 <span id="bonusCount">0</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sắp xếp progress và current word vào cùng hàng -->
-            <div class="progress-and-word-section">
-                <div class="progress-section">
-                    <div class="progress-label">
-                        <span>📊 Tiến Độ</span>
-                        <span id="progressText">0 / 0</span>
-                    </div>
-                    <div class="progress-bar-container">
-                        <div id="progressBar" class="progress-bar" style="width: 0%;">0%</div>
-                    </div>
-                </div>
-                
-                <div class="current-word-section">
-                    <div class="word-label">Từ bạn đang ghép:</div>
-                    <div id="currentWord" class="word-letters">___</div>
-                </div>
-            </div>
-
-            <!-- Hint display phía trên grid -->
-            <div class="hint-section">
-                <div id="hintDisplay" class="hint-display"></div>
-            </div>
-
-            <div class="grid-container">
-                <div id="gridBoard" class="grid-board"></div>
-            </div>
-
-            <div id="feedback" class="feedback"></div>
+<div id="gameSection" class="game-section">
+    <!-- Thanh tiến độ lên trên -->
+    <div class="progress-section">
+        <div class="progress-label">
+            <span>📊 Tiến Độ</span>
+            <span id="progressText">0 / 0</span>
         </div>
+        <div class="progress-bar-container">
+            <div id="progressBar" class="progress-bar" style="width: 0%;">0%</div>
+        </div>
+    </div>
+
+    <!-- Sử dụng lại class progress-and-word-section nhưng đổi nội dung -->
+    <div class="progress-and-word-section">
+        <div class="game-info" style="grid-column: 1;">
+            <div class="info-box score-display">
+                💰 <span id="score">0</span>
+            </div>
+            <div id="comboDisplay" class="info-box combo-display" style="display: none;">
+                🔥 x<span id="combo">1</span>
+            </div>
+            <div class="info-box">
+                ⏱️ <span id="speedLevel">1</span>
+            </div>
+            <div class="info-box" style="background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);">
+                📚 <span id="bonusCount">0</span>
+            </div>
+        </div>
+        
+        <div class="current-word-section" style="grid-column: 2;">
+            <div class="word-label">Từ bạn đang ghép:</div>
+            <div id="currentWord" class="word-letters">___</div>
+        </div>
+    </div>
+
+    <!-- Phần còn lại giữ nguyên -->
+    <div class="hint-section">
+        <div id="hintDisplay" class="hint-display"></div>
+    </div>
+
+    <div class="grid-container">
+        <div id="gridBoard" class="grid-board"></div>
+    </div>
+
+    <div id="feedback" class="feedback"></div>
+</div>
 
         <div id="gameOverModal" class="modal">
             <div class="modal-content">
