@@ -78,6 +78,26 @@
             font-size: 2.2em;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
+        /* Style cho header chứa logo và tiêu đề */
+.header-with-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.header-with-logo img {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.header-with-logo h1 {
+    margin: 0;
+    font-size: 2.2em;
+}
 
         .mode-section {
             margin-bottom: 25px;
@@ -1026,10 +1046,10 @@
     </div>
 
     <div class="container">
-        <div class="header-logo">
-            <img src="word-find.png" alt="Word Find Logo" style="width: 150px; height: auto; margin: 0 auto 20px; display: block;">
-        </div> 
-        <h1 id="mainTitle"> Word Find Puzzle</h1>
+    <div class="header-with-logo">
+        <img src="word-find.png" alt="Word Find Logo">
+        <h1 id="mainTitle"> Word Find Puzzle </h1>
+    </div>
 
         <div id="modeSection" class="mode-section">
             <div id="vocabStatus" class="vocab-status" style="display: none;"></div>
