@@ -2017,7 +2017,7 @@
 
             if (gameMode === 'team') {
                 // Hiển thị thông tin chế độ chơi
-                gameModeInfo.innerHTML = `<strong>Game Mode:</strong> 2 Teams | <strong>Difficulty:</strong> ${difficulty.toUpperCase()}`;
+                gameModeInfo.innerHTML = `<strong>Difficulty:</strong> ${difficulty.toUpperCase()}`;
                 
                 if (redTeamScore > blueTeamScore) {
                     winner = '🔴 RED TEAM WINS! 🔴';
@@ -2038,7 +2038,7 @@
                 `;
             } else {
                 // SOLO MODE
-                gameModeInfo.innerHTML = `<strong>Game Mode:</strong> Solo Player | <strong>Difficulty:</strong> ${difficulty.toUpperCase()}`;
+                gameModeInfo.innerHTML = `<strong>Difficulty:</strong> ${difficulty.toUpperCase()}`;
                 
                 winner = 'Well done!';
                 winnerColor = '#27ae60';
@@ -2046,7 +2046,6 @@
                     <div>🎯 Your Final Score: <strong>${soloScore}</strong> points</div>
                     <div style="margin-top: 10px;">Total words completed: <strong>${words.length}</strong></div>
                     <div>Correct words: <strong>${gameResults.filter(r => r.correct).length}</strong></div>
-                    <div>Average score per word: <strong>${(soloScore / words.length).toFixed(1)}</strong> points</div>
                 `;
             }
 
